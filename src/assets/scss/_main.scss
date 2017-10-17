@@ -1,0 +1,154 @@
+/* ===========================
+     Author: Bhargav Gandhi (BG)
+     Description: main.scss
+     =========================== */
+//set the grid gap
+$gridgap: 7.5%;
+
+.center-inner {
+  width: 100%;
+  height: auto;
+  margin-left: -50%;
+  text-align: center;
+  max-width: 100%;
+}
+
+.btn {
+  clear: both;
+  display: block;
+  font-family: $fontStack;
+  font-size: 14px;
+  font-size: 0.875em;
+  line-height: 1.29;
+  letter-spacing: 0.1px;
+  text-align: center;
+  color: #000000;
+  padding: 1.4em;
+  background: transparent;
+  border: 1px solid #c09260;
+  background: transparent;
+  margin-right: 3em;
+  float: none !important;
+  outline: none;
+  max-width: 220px;
+  max-width: 16em;
+  margin: 10px auto 0;
+  -webkit-font-smoothing: antialiased;
+  border-radius: 0 !important;
+}
+
+img {
+  display: block;
+}
+
+.mainCopy {
+  p {
+    text-align: left;
+    font-family: $fontStack;
+    font-size: 24px;
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 1.42;
+    letter-spacing: 0.5px;
+    color: #333333;
+    max-width: 37.5em;
+  }
+}
+
+.main-block {
+  height: 100vh;
+  position: relative;
+
+  .left-sec,
+  .right-sec {
+    display: inline-block;
+    width: auto;
+    min-width: 50%;
+    overflow: visible;
+    vertical-align: top;
+
+    .float-block,
+    img {
+      margin: 1em 0;
+      position: absolute;
+    }
+
+    .left-image-1 {
+      top: 0;
+      left: $gridgap;
+      width: 31%;
+    }
+
+    .left-image-2 {
+      top: 40%;
+      left: $gridgap;
+      width: 34%;
+    }
+
+    .left-image-3 {
+      top: 48%;
+      left: $gridgap;
+      width: 36.8%;
+    }
+
+    .left-block-4 {
+      bottom: 12%;
+      left: $gridgap;
+      width: 45%;
+    }
+
+    .left-image-4 {
+      bottom: 3.75%;
+      left: $gridgap;
+      width: 51.15%;
+    }
+    //Right Side Section Images
+    .right-image-1 {
+      top: 0;
+      right: $gridgap;
+      width: 61.5%;
+    }
+
+    .right-image-2 {
+      top: 8%;
+      right: $gridgap;
+      width: 58.5%;
+    }
+
+    .right-image-3 {
+      top: 32%;
+      right: $gridgap;
+      width: 49.9%;
+    }
+
+    .right-image-4 {
+      top: 40%;
+      right: $gridgap;
+      width: 47%;
+    }
+  }
+
+  .left-sec {
+    margin-right: -15px;
+  }
+
+  h2 {
+    font-size: 36px;
+    font-size: 2.25em;
+    font-weight: bold;
+    line-height: 1.0;
+    text-align: left;
+    color: #249c84;
+    max-width: 7em;
+  }
+
+  p {
+    margin-top: 1em;
+    font-size: 14px;
+    font-size: 0.875em;
+    line-height: 1.4;
+    text-align: left;
+    color: #000;
+    letter-spacing: 0.3px;
+  }
+}
