@@ -45,34 +45,38 @@ nav {
   margin-bottom: 0 !important;
 }
 
-.navbar-header{
+.navbar-header {
   float: none;
   text-align: left;
 }
 
 .navbar .navbar-nav {
-    display: block;
-    width: 100%;
-    text-align: right;
-    margin: 0 auto;
-    float: none;
+  display: block;
+  width: 100%;
+  text-align: right;
+  margin: 0 auto;
+  float: none;
 }
 
 .navbar .navbar-nav li {
-    vertical-align: middle;
-    display: block;
-    float: none;
-    margin: 0;
+  vertical-align: middle;
+  display: block;
+  float: none;
+  margin: 0;
 
-    &.active{
-      a{
+  &.active {
+    a {
+      background-color: transparent;
+      color: #249c84 !important;
+
+      &:active,
+      &:focus,
+      &:hover,
+      &:visited {
         background-color: transparent;
-        color: #249c84 !important;
-        &:hover, &:active, &:visited, &:focus{
-          background-color: transparent;
-        }
       }
     }
+  }
 }
 
 #mainNav.navbar-default .navbar-nav > li > a {
@@ -86,15 +90,18 @@ nav {
   color: #fff !important;
   text-decoration: none;
   padding: 20px 0 0;
-  &:hover, &:active, &:visited, &:focus{
+
+  &:active,
+  &:focus,
+  &:hover,
+  &:visited {
     background-color: transparent;
   }
 }
 
-#mainNav.navbar-default .navbar-nav>li.active>a{
+#mainNav.navbar-default .navbar-nav > li.active > a {
   color: #249c84 !important;
 }
-
 // .navbar .navbar-collapse {
 //   text-align: left;
 //   margin-top: 0;
@@ -115,19 +122,17 @@ nav {
   -moz-transition: all 0.35s;
   transition: all 0.35s;
 }
-
-
 /*Navigation styles*/
-
 .navbar-default .navbar-toggle {
   border-color: transparent;
   border: 0;
 }
 
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-    border-color: transparent;
-    width: 100%;
-    margin: 3em 0;
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: transparent;
+  width: 100%;
+  margin: 3em 0;
 }
 
 .navbar-brand {
@@ -148,11 +153,9 @@ a.navbar-brand {
 
 #mainNav .navbar-brand > img {
   display: inline-block;
-  width: 169px;
-  width: 9.4em;
+  width: 50px;
+  width: 3.125em;
 }
-
-
 
 #mainNav .navbar-brand {
   height: auto;
@@ -167,7 +170,7 @@ a.navbar-brand {
   font-size: 1em;
   width: 25px;
   top: 5px;
-  right: 0px;
+  right: 0;
   padding: 0;
   border: 0;
   margin: 10px auto;
@@ -195,7 +198,7 @@ a.navbar-brand {
   width: 100%;
   background: #000000;
   opacity: 1;
-  left:0;
+  left: 0;
   border: 0;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
@@ -248,13 +251,12 @@ a.navbar-brand {
 @media screen and (min-width: 320px) and (max-width: 767px) {
   #mainNav .navbar-brand > img {
     display: inline-block;
-    width: 120px;
-    width: 8em;
+    width: 50px;
+    width: 3.125em;
   }
 }
 @media screen and (min-width: 320px) and (max-width: 999px) {
-
-  #mainNav.navbar-default .navbar-nav>li>a {
+  #mainNav.navbar-default .navbar-nav > li > a {
     text-align: center;
   }
 
@@ -268,6 +270,7 @@ a.navbar-brand {
     padding: 20px;
     min-height: 100px;
   }
+
   .navbar .navbar-collapse {
     text-align: center;
     margin: 3em auto 0;
@@ -360,7 +363,6 @@ a.navbar-brand {
   }
 }
 @media screen and (min-width: 1000px) {
-
   .navbar .navbar-nav {
     display: block;
     float: right;
@@ -403,11 +405,10 @@ screen and (min-device-pixel-ratio: 1.5) {
 @media screen and (min-width: 1200px) {
   #mainNav .navbar-brand > img {
     display: inline-block;
-    width: 169px;
-    width: 9.4em;
+    width: 50px;
+    width: 3.125em;
   }
 }
-
 @media screen and (min-width: 1800px) {
   a.navbar-brand {
     font-size: 18px;

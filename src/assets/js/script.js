@@ -34,6 +34,7 @@ $(function() {
 
   $('.nav-toggle').click(function(){
     $('header').toggleClass('closeHead');
+    $('.navbar-collapse').toggleClass('slideRightHeading');
   });
 
   $('.homeSlides').bxSlider({
