@@ -70,6 +70,7 @@ img {
 
       a {
         text-decoration: none;
+        display: block;
         &:hover, &:focus, &:visited{
           text-decoration: none;
           color: inherit;
@@ -123,6 +124,21 @@ img {
           color: #000;
           fill: #000;
           letter-spacing: 0.3px;
+        }
+      }
+
+      .12w27-main{
+        pointer-events: none;
+      }
+      .12w27-black{
+        pointer-events: none;
+      }
+      .12w27:hover{
+        .12w27-main{
+          opacity: 0;
+        }
+        .12w27-black{
+          opacity: 1;
         }
       }
 
