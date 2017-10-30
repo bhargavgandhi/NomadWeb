@@ -4,7 +4,7 @@ $fontStack: sans-serif;
 
 a {
   text-decoration: none;
-  color: inherit !important;
+  color: inherit;
 }
 
 .container {
@@ -63,11 +63,12 @@ nav {
   display: block;
   float: none;
   margin: 0;
+  color: #fff;
 
   &.active {
     a {
       background-color: transparent;
-      color: #249c84 !important;
+      color: #249c84;
 
       &:active,
       &:focus,
@@ -77,6 +78,7 @@ nav {
       }
     }
   }
+
 }
 
 #mainNav.navbar-default .navbar-nav > li > a {
@@ -87,7 +89,7 @@ nav {
   font-weight: 500;
   letter-spacing: 0.4px;
   text-align: justify;
-  color: #fff !important;
+  color: #fff;
   text-decoration: none;
   padding: 20px 0 0;
 
@@ -97,10 +99,21 @@ nav {
   &:visited {
     background-color: transparent;
   }
+    &:hover{
+      color: #249c84;
+    }
 }
 
 #mainNav.navbar-default .navbar-nav > li.active > a {
-  color: #249c84 !important;
+  color: #249c84;
+
+  &:active,
+  &:focus,
+  &:hover,
+  &:visited {
+    background-color: transparent;
+    color: #249c84;
+  }
 }
 // .navbar .navbar-collapse {
 //   text-align: left;
@@ -248,6 +261,75 @@ a.navbar-brand {
   width: 0;
   left: 50%;
 }
+
+.navbar {
+  .navbar-nav{
+    li{
+      .dropdown-menu {
+        li {
+          a{
+            color: #6f6e6e;
+            padding:0;
+            img {
+              display: inline-block;
+            }
+            .nav-icon-sub-active{
+              display: none;
+            }
+
+            .nav-icon-sub{
+              display: inline-block;
+            }
+
+            &:hover{
+              color: #249c84;
+
+              .nav-icon-sub{
+                display: none;
+              }
+              .nav-icon-sub-active{
+                display: inline-block;
+              }
+            }
+          }
+          &.active{
+            a{
+              color: #249c84;
+
+              .nav-icon-sub{
+                display: none;
+              }
+              .nav-icon-sub-active{
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.dropdown-menu {
+    position: relative;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: none;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 0;
+    border-radius: 0;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.175);
+}
+
+
 @media screen and (min-width: 320px) and (max-width: 767px) {
   #mainNav .navbar-brand > img {
     display: inline-block;

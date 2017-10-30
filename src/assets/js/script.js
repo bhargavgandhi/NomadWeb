@@ -35,6 +35,8 @@ $(function() {
   $('.nav-toggle').click(function(){
     $('header').toggleClass('closeHead');
     $('.navbar-collapse').toggleClass('slideRightHeading');
+
+    $('header.row, .navbar-collapse, #mainNav, footer, .nav-toggle').removeClass('animation-delay');
   });
 
   $('.homeSlides').bxSlider({
