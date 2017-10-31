@@ -1,0 +1,63 @@
+/* ===========================
+     Author: Bhargav Gandhi (BG)
+     Description: testimonials.scss
+     =========================== */
+.map-block {
+  margin: 2.5em 1em 2.5em 0;
+}
+
+.map-block,
+.map-list-block-main {
+  vertical-align: top;
+}
+
+.map-list-block-main {
+  margin-left: 3%;
+  h2 {
+    font-family: TradeGothic-CondTwenty;
+    font-size: 39px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: left;
+    color: #249c84;
+  }
+
+  .map-list-block {
+    display: flex;
+    .map-lists-row {
+      flex: 1;
+
+      .map-lists {
+        h3 {
+          font-family: TradeGothic-CondTwenty;
+          font-size: 14px;
+          font-weight: bold;
+          line-height: 2.94;
+          letter-spacing: normal;
+          color: #249c84;
+        }
+
+        ol {
+          list-style: none;
+          counter-reset: Item;
+
+          li {
+            font-family: ArchivoNarrow;
+            font-size: 11px;
+            line-height: 1.25;
+            letter-spacing: -0.2px;
+            text-align: left;
+            color: #000000;
+
+            &:before {
+              content: counter(Item) "- ";
+              counter-increment: Item;
+              margin: 0;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

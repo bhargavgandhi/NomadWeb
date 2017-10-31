@@ -78,7 +78,6 @@ nav {
       }
     }
   }
-
 }
 
 #mainNav.navbar-default .navbar-nav > li > a {
@@ -99,9 +98,10 @@ nav {
   &:visited {
     background-color: transparent;
   }
-    &:hover{
-      color: #249c84;
-    }
+
+  &:hover {
+    color: #249c84;
+  }
 }
 
 #mainNav.navbar-default .navbar-nav > li.active > a {
@@ -263,44 +263,114 @@ a.navbar-brand {
 }
 
 .navbar {
-  .navbar-nav{
-    li{
+  .navbar-nav {
+    li {
       .dropdown-menu {
         li {
-          a{
-            color: #6f6e6e;
-            padding:0;
-            img {
-              display: inline-block;
-            }
-            .nav-icon-sub-active{
-              display: none;
-            }
+          margin: 5px 0 0;
 
-            .nav-icon-sub{
-              display: inline-block;
+          .testimonials-icon {
+            &:before {
+              content: url("../images/testimonials-icon.svg");
+              width: 10px;
             }
 
             &:hover{
-              color: #249c84;
-
-              .nav-icon-sub{
-                display: none;
-              }
-              .nav-icon-sub-active{
-                display: inline-block;
+              &:before {
+                content: url("../images/testimonials-icon-active.svg");
+                width: 10px;
               }
             }
           }
-          &.active{
-            a{
+          .destination-icon {
+            &:before {
+              content: url("../images/destination-icon.svg");
+            }
+            &:hover{
+              &:before {
+                content: url("../images/destination-icon-active.svg");
+              }
+            }
+          }
+          .transport-icon {
+            &:before {
+              content: url("../images/transport-icon.svg");
+            }
+            &:hover{
+              &:before {
+                content: url("../images/transport-icon-active.svg");
+              }
+            }
+          }
+
+
+          a {
+            color: #6f6e6e;
+            padding: 0;
+            font-size: 13px;
+            font-size: 0.8em;
+
+            img {
+              display: inline-block;
+            }
+
+            .nav-icon-sub-active {
+              display: none;
+            }
+
+            .nav-icon-sub {
+              display: inline-block;
+            }
+            &:before {
+              content: "";
+              width: 8px;
+              margin-right: 2px;
+              display: inline-block;
+              vertical-align: middle;
+            }
+
+            &:hover {
               color: #249c84;
 
-              .nav-icon-sub{
+              .nav-icon-sub {
                 display: none;
               }
-              .nav-icon-sub-active{
+
+              .nav-icon-sub-active {
                 display: inline-block;
+              }
+
+            }
+
+          }
+
+
+          &.active {
+            a {
+              color: #249c84;
+
+              .nav-icon-sub {
+                display: none;
+              }
+
+              .nav-icon-sub-active {
+                display: inline-block;
+              }
+            }
+
+            .testimonials-icon {
+              &:before {
+                content: url("../images/testimonials-icon-active.svg");
+              }
+            }
+            .destination-icon {
+              &:before {
+                content: url("../images/destination-icon-active.svg");
+              }
+            }
+            .transport-icon {
+              &:before {
+                content: url("../images/transport-icon-active.svg");
               }
             }
           }
@@ -309,25 +379,38 @@ a.navbar-brand {
     }
   }
 }
+
 .dropdown-menu {
-    position: relative;
-    left: 0;
-    z-index: 1000;
-    display: none;
-    float: none;
-    min-width: 160px;
-    padding: 5px 0;
-    margin: 2px 0 0;
-    font-size: 14px;
-    text-align: left;
-    list-style: none;
-    background-color: transparent;
-    background-clip: padding-box;
-    border: 1px solid #ccc;
-    border: 0;
-    border-radius: 0;
-    box-shadow: 0 0px 0px rgba(0,0,0,0.175);
+  position: relative;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: none;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  list-style: none;
+  background-color: transparent;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 0 0 rgba(0,0,0,0.175);
 }
+
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+    color: #262626;
+    text-decoration: none;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+    color: #555;
+    background-color: transparent;
+}
+
 
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
