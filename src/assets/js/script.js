@@ -36,7 +36,7 @@ $(function() {
     $('header').toggleClass('closeHead');
     $('.navbar-collapse').toggleClass('slideRightHeading');
 
-    $('header.row, .navbar-collapse, #mainNav, footer, .nav-toggle').removeClass('animation-delay');
+    $('header .wrapper, .navbar-collapse, #mainNav, footer, .nav-toggle').removeClass('animation-delay');
   });
 
   $('.homeSlides').bxSlider({
@@ -46,5 +46,18 @@ $(function() {
     pager: true,
     pagerType: 'short',
   });
+
+
+  // $('.map-btns').click(function() {
+  //
+  //   $('.map-images').css({
+  //     'opacity' : 0
+  //   });
+  //   $('.map-restaurants-image').css({
+  //     'opacity' : 1
+  //   });
+  // })
+
+
 
 });

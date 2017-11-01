@@ -1,6 +1,6 @@
 @charset "utf-8";
 $bgColorHome: #ffffff;
-$fontStack: sans-serif;
+$fontStack: 'TradeGothic-BoldCondTwenty', sans-serif;
 
 a {
   text-decoration: none;
@@ -173,7 +173,8 @@ a.navbar-brand {
 #mainNav .navbar-brand {
   height: auto;
   margin-left: 0;
-  padding: 15px 0;
+  padding: 0;
+  display: block;
   margin: 0 40px 0 0;
 }
 

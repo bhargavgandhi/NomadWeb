@@ -13,49 +13,73 @@
 
 .map-list-block-main {
   margin-left: 3%;
+
   h2 {
-    font-family: TradeGothic-CondTwenty;
+    font-family: $fontStack;
     font-size: 39px;
     font-weight: bold;
     line-height: 1;
     text-align: left;
     color: #249c84;
+    max-width: 80%;
+    margin: 1.25em 0 25px;
   }
 
   .map-list-block {
     display: flex;
+
     .map-lists-row {
       flex: 1;
+    }
+  }
 
-      .map-lists {
-        h3 {
-          font-family: TradeGothic-CondTwenty;
-          font-size: 14px;
-          font-weight: bold;
-          line-height: 2.94;
-          letter-spacing: normal;
-          color: #249c84;
-        }
+  .map-transport-lists {
+    .map-lists {
+        margin: 0.5em 0;
+      img {
+        max-width: 70%;
+      }
 
-        ol {
-          list-style: none;
-          counter-reset: Item;
+      .citibike-icon {
+        max-width: 40%;
+      }
 
-          li {
-            font-family: ArchivoNarrow;
-            font-size: 11px;
-            line-height: 1.25;
-            letter-spacing: -0.2px;
-            text-align: left;
-            color: #000000;
+      h3 {
+        line-height: 3;
+      }
+    }
+  }
 
-            &:before {
-              content: counter(Item) "- ";
-              counter-increment: Item;
-              margin: 0;
-              padding: 0;
-            }
-          }
+  .map-lists {
+    margin: 1em 0;
+
+    h3 {
+      font-family: $fontStack;
+      font-size: 14px;
+      font-size: 0.85em;
+      font-weight: bold;
+      line-height: 1.2;
+      letter-spacing: normal;
+      color: #249c84;
+    }
+
+    ol {
+      list-style: none;
+      counter-reset: Item;
+
+      li {
+        font-family: $archivoNarrow;
+        font-size: 11px;
+        line-height: 1.25;
+        letter-spacing: -0.2px;
+        text-align: left;
+        color: #000000;
+
+        &:before {
+          content: counter(Item) "- ";
+          counter-increment: Item;
+          margin: 0;
+          padding: 0;
         }
       }
     }

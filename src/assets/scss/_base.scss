@@ -3,14 +3,28 @@
      Description: _base.scss
      =========================== */
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow');
+
+@font-face {
+	font-family: 'TradeGothic-BoldCondTwenty';
+	src: url('../fonts/TradeGothic-BoldCondTwenty.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TradeGothic-Bold2';
+	src: url('../fonts/TradeGothic-Bold2.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
 /* Style Guide */
-$fontStack: 'TradeGothic Trade Gothic Condensed No. 18', 'TradeGothic-CondEighteen', sans-serif;
-$MaisonNeueDemi: sans-serif;
-$MaisonNeueMedium: sans-serif;
-$MaisonNeueLight: sans-serif;
-$LinotypeBold: sans-serif;
-$Linotype: sans-serif;
-$ManifoldCF-Bold: sans-serif;
+$fontStack: 'TradeGothic-BoldCondTwenty', sans-serif;
+$tradeGothicCondEighteen: 'TradeGothic-Bold2', sans-serif;
+$archivoNarrow: 'Archivo Narrow', sans-serif;
+
+
 $buttonColor: transparent;
 $buttonBorderColor: transparent;
 /* $bgColorHome: #F9F6F4;*/
@@ -224,9 +238,9 @@ img {}
 
 .main-container {
   display: inline-block;
-  width: 86%;
+  width: 82%;
   vertical-align: top;
-  margin-left: 14%;
+  margin-left: 18%;
 }
 
 .fullContainer {

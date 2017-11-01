@@ -44,7 +44,7 @@ img {
 .mainCopy {
   p {
     text-align: left;
-    font-family: $fontStack;
+    font-family: $archivoNarrow;
     font-size: 24px;
     font-size: 1.5em;
     font-weight: 500;
@@ -79,7 +79,7 @@ h2 {
 
 blockquote {
   p {
-    font-family: ArchivoNarrow;
+    font-family: $archivoNarrow;
     font-size: 15px;
     line-height: 1.4;
     letter-spacing: 0.3px;
@@ -89,6 +89,7 @@ blockquote {
   }
 
   footer{
+    font-family: $archivoNarrow;
     color: inherit;
     margin-top: 1em;
     &:before{
@@ -181,6 +182,7 @@ blockquote {
         text-align: left;
 
         p {
+          font-family: $archivoNarrow;
           font-size: 14px;
           font-size: 0.875em;
           line-height: 1.4;
