@@ -3,7 +3,6 @@
      Description: _mediaDesktop.scss
      =========================== */
 /* Media Queries Desktop */
-@media screen and (min-width: 1000px) and (max-width: 1279px) {}
 @media screen and (min-width: 1000px) {
   .row {
     padding: 2em 5em;
@@ -32,6 +31,10 @@
     margin-left: -50%;
     text-align: center;
     max-width: 100%;
+  }
+
+  .floatRightDesk{
+    float: right
   }
 }
 @media screen and (min-width: 1200px) {

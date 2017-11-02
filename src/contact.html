@@ -19,9 +19,18 @@
 	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
+<style>
+html,
+body,
+.container,
+.main-container,
+.main-container .row{
+	height: 100%;
+}
+</style>
 </head>
 
-<body class="home animated">
+<body class="contact animated">
 	<div id="preloader" class="Hide"></div>
 	<section class="container">
 		<header>
@@ -75,7 +84,7 @@
 								</ul>
 							</li>
 							<li>
-								<a href="#">NEWS</a>
+								<a href="news.html">NEWS</a>
 							</li>
 							<li class="active">
 								<a href="contact.html">CONTACT</a>
@@ -110,30 +119,98 @@
 
 		<section class="main-container">
 			<section class="row">
-				<div class="main-block">
-					<div class="col-xs-6">
+				<div class="contact-block">
+					<div class="col-xs-12 contact-form-block">
 						<h2 class="green-text">
 							CONTACT
 						</h2>
+						<div class="col-xs-6">
+							<form id="contact-form-main" action="thanks.php" method="post">
+								<div class="col-xs-12 col-sm-6 marginLess5 form-field slant-end">
+									<input type="text" name="fname" id="fname" placeholder="First Name" maxlength="50" />
+								</div>
+								<div class="col-xs-12 col-sm-6 form-field slant-end-left">
+									<input type="text" name="lname" id="lname" class="floatRightDesk" placeholder="Last Name" maxlength="50" />
+								</div>
+								<div class="col-xs-12 col-sm-6 marginLess5 form-field slant-end-2">
+									<input type="email" name="email" id="email" placeholder="Email" maxlength="100" />
+								</div>
+								<div class="col-xs-12 col-sm-6 form-field slant-end-left-2">
+									<input type="tel" name="phone" id="phone" class="floatRightDesk" placeholder="Phone" maxlength="10" />
+								</div>
+								<div class="col-xs-12 col-sm-12 form-field">
+									<textarea name="message" id="message" maxlength="1000" rows="7" cols="30" placeholder="Message"></textarea>
+								</div>
+								<div class="col-xs-12 col-sm-2 form-field">
+									<input type="submit" name="Submit" id="Submit" value="Submit" />
+								</div>
+							</form>
+						</div>
+						<div class="col-xs-5 contact-content-block">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+								in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							</p>
+							<div class="contact-info">
+								<h3>DAVID COHEN</h3>
+								<h4>Vice President - Leasing</h4>
+								<a href="mailto:dcohen@merprop.com"> dcohen@merprop.com </a>
+							</div>
+							<div class="contact-info">
+								<h3>JASON VACKER</h3>
+								<h4>President & CEO</h4>
+								<a href="mailto:jvacker@merprop.com"> jvacker@merprop.com </a>
+							</div>
+							<div class="contact-info">
+								<a href="tel:212.645.7575"> 212.645.7575 </a>
+							</div>
 
-						<form>
-							<div>
-								<input type="text" name="fname" id="fname" class="" />
-								<input type="text" name="lname" id="lname" class="" />
-							</div>
-							<div>
-								<input type="text" name="fname" id="fname" class="" />
-								<input type="text" name="lname" id="lname" class="" />
-							</div>
-							<div>
-								<textarea name="lname" id="lname" class="" cols="40" rows="10" ></textarea>
-							</div>
-							<div>
-								<input type="submit" name="lname" id="lname" class="" value="Submit" />
-							</div>
-						</form>
-					<div>
+
+							<footer class="contact-footer">
+								<figure class="merginoff-logo">
+									<img src="assets/images/meringoff-properties-logo.svg" class="img-responsive" />
+								</figure>
+
+								<figure class="himmel-logo">
+									<img src="assets/images/himmel-meringoff-logo.svg" class="img-responsive" />
+								</figure>
+
+								<figure class="rebny-logo">
+									<img src="assets/images/rebny-logo.svg" class="img-responsive" />
+								</figure>
+
+								<div class="contact-copyrights">
+									<p>
+										© NoMad Portfolio 2017. All Rights Reserved.
+									</p>
+								</div>
+								<div class="contact-footer-links">
+									<ul>
+										<li>
+											<a href="">
+													Privacy
+											</a>
+										</li>
+										<li>
+											<a href="">
+													Legal
+											</a>
+										</li>
+
+									</ul>
+								</div>
+
+							</footer>
+						</div>
+
+
+					</div>
+
+
+
+
 				</div>
+				<!-- Contact Form Ends -->
 			</section>
 		</section>
 		<!-- End MainContainer -->
