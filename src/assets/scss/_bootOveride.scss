@@ -283,6 +283,19 @@ a.navbar-brand {
               }
             }
           }
+          .properties-icon {
+            &:before {
+              content: url("../images/properties-icon.svg");
+              width: 10px;
+            }
+
+            &:hover{
+              &:before {
+                content: url("../images/properties-icon-active.svg");
+                width: 10px;
+              }
+            }
+          }
           .destination-icon {
             &:before {
               content: url("../images/destination-icon.svg");
@@ -364,6 +377,14 @@ a.navbar-brand {
                 content: url("../images/testimonials-icon-active.svg");
               }
             }
+
+            .properties-icon {
+              &:before {
+                content: url("../images/properties-icon-active.svg");
+                width: 10px;
+              }
+            }
+
             .destination-icon {
               &:before {
                 content: url("../images/destination-icon-active.svg");

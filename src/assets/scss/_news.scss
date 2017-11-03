@@ -1,21 +1,22 @@
 /* ===========================
      Author: Bhargav Gandhi (BG)
-     Description: testimonials.scss
+     Description: news.scss
      =========================== */
 .news-block {
   margin: 0 auto;
+
   h2 {
     max-width: 5em;
     margin: 1.25em 0 25px;
     line-height: 1;
   }
 }
+
 .news-lists {
   .news-item {
     display: flex;
     flex-direction: row;
     border-top: 1px solid #000;
-    //border-bottom: 1px solid #000;
 
     &:last-child {
       border-bottom: 1px solid #000;
@@ -27,7 +28,7 @@
       font-size: 16px;
       font-size: 1em;
       font-weight: bold;
-      line-height: 2.06;
+      line-height: 3.2;
       text-align: left;
       color: #000000;
       margin: 10px auto;
@@ -37,7 +38,7 @@
     .news-title {
       width: 30%;
       font-weight: bold;
-      line-height: 2.2;
+      line-height: 3.5;
       text-align: left;
       color: #249c84;
       margin: 10px 0;
@@ -46,7 +47,7 @@
     .news-date {
       width: 30%;
       font-family: $archivoNarrow;
-      line-height: 1.4;
+      line-height: 3.5;
       font-weight: normal;
       letter-spacing: -0.2px;
       text-align: center;
@@ -56,12 +57,60 @@
     .news-link {
       width: 30%;
       font-family: $archivoNarrow;
-      line-height: 1.4;
+      line-height: 3.5;
       font-weight: normal;
       letter-spacing: -0.2px;
-      text-align: center;
+      text-align: right;
+      text-decoration: none;
       color: #000000;
 
+      span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      img {
+        width: 20px;
+        display: inline-block;
+        transform: rotate(270deg);
+        vertical-align: middle;
+        margin: 0 5% 0 20%;
+      }
+
+      &:active,
+      &:focus,
+      &:hover,
+      &:visited,
+      span {
+        text-decoration: none;
+        font-size: 16px;
+        font-size: 1em;
+        font-family: $archivoNarrow;
+        text-align: right;
+        color: #000000;
+      }
     }
+  }
+}
+
+.news-sorting {
+  margin: 1em 0;
+
+  img,
+  p {
+    display: inline-block;
+    margin:0;
+  }
+
+  p {
+    font-family: $archivoNarrow;
+    font-size: 11px;
+    line-height: normal;
+    text-align: left;
+    color: #6f6e6e;
+  }
+
+  img {
+    width: 12px;
   }
 }
