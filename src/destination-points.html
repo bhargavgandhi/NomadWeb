@@ -41,7 +41,11 @@
 					<div class="navbar-collapse collapse animated2 animation-delay" id="bs-example-navbar-collapse-1" aria-expanded="false">
 						<ul class="nav navbar-nav">
 
-							<li class="dropdown">
+							<li>
+								<a href="index.html">HOME</a>
+							</li>
+
+							<!-- <li class="dropdown">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 								HOME
 							</a>
@@ -52,37 +56,37 @@
 									</a>
 									</li>
 								</ul>
-							</li>
+							</li> -->
 
 							<li class="dropdown">
 								<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-									PROPERTIES
+									PORTFOLIO
 								</a>
 								<ul class="dropdown-menu">
 									<li>
-										<a class="properties-icon" href="properties-2w-21st.html">
+										<a class="portfolio-icon" href="portfolio-2w-21st.html">
 											2 W 21ST ST
 										</a>
 									</li>
 									<li>
-										<a class="properties-icon" href="properties-30w-26st.html">
+										<a class="portfolio-icon" href="portfolio-30w-26st.html">
 											30 W 26TH ST
 										</a>
 									</li>
 									<li>
-										<a class="properties-icon" href="properties-12w-27st.html">
+										<a class="portfolio-icon" href="portfolio-12w-27st.html">
 											12 W 27TH ST
 										</a>
 									</li>
 
 									<li>
-										<a class="properties-icon" href="properties-401-park-ave-s.html">
+										<a class="portfolio-icon" href="portfolio-401-park-ave-s.html">
 											401 PARK AVE S
 										</a>
 									</li>
 
 									<li>
-										<a class="properties-icon" href="properties-6e-32st.html">
+										<a class="portfolio-icon" href="portfolio-6e-32st.html">
 											6 E 32ND ST
 										</a>
 									</li>
@@ -147,10 +151,22 @@
 						<g id="main-group">
 						<a>
 							<image x="0" y="0" width="1112" height="1272" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink"
-							xlink:href="assets/images/destination-points-map.png" class="map-images map-all-image">
+							xlink:href="assets/images/map-all@x2.png" class="map-images map-all-image">
 							</image>
 							<image x="0" y="0" width="1112" height="1272" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink"
-							xlink:href="assets/images/map-restaurants.png" class="map-images map-restaurants-image">
+							xlink:href="assets/images/map-restaurants@x2.png" class="map-images map-restaurants-image">
+							</image>
+							<image x="0" y="0" width="1112" height="1272" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink"
+							xlink:href="assets/images/map-hotels@x2.png" class="map-images map-hotels-image">
+							</image>
+							<image x="0" y="0" width="1112" height="1272" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink"
+							xlink:href="assets/images/map-fitness@x2.png" class="map-images map-fitness-image">
+							</image>
+							<image x="0" y="0" width="1112" height="1272" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink"
+							xlink:href="assets/images/map-supermarkets@x2.png" class="map-images map-supermarkets-image">
+							</image>
+							<image x="0" y="0" width="1112" height="1272" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink"
+							xlink:href="assets/images/map-amenities@x2.png" class="map-images map-amenities-image">
 							</image>
 						</a>
 					</g>
@@ -164,7 +180,7 @@
 					<div class="map-list-block">
 						<div class="map-lists-row">
 							<div class="map-lists">
-								<h3 class"map-btns map-restaurants">RESTAURANTS</h3>
+								<h3 class="map-btns" data-target-image="map-restaurants">RESTAURANTS</h3>
 								<ol>
 									<li>230 Rooftop Bar</li>
 									<li>Eleven Madison Park</li>
@@ -207,7 +223,7 @@
 						<div class="map-lists-row">
 
 							<div class="map-lists">
-								<h3>HOTELS</h3>
+								<h3 class="map-btns" data-target-image="map-hotels">HOTELS</h3>
 								<ol>
 									<li>The NoMad Hotel</li>
 									<li>ACE Hotel</li>
@@ -219,7 +235,7 @@
 							</div>
 
 							<div class="map-lists">
-								<h3>FITNESS</h3>
+								<h3 class="map-btns" data-target-image="map-fitness">FITNESS</h3>
 								<ol>
 									<li>Soul Cycle NoMad</li>
 									<li>CrossFit NYC</li>
@@ -236,21 +252,21 @@
 							</div>
 
 							<div class="map-lists">
-								<h3>SUPERMARKETS</h3>
+								<h3 class="map-btns" data-target-image="map-supermarkets">SUPERMARKETS</h3>
 								<ol>
 									<li>Fairway Market Chelsea</li>
 									<li>Eataly NYC Flatiron</li>
 								</ol>
 							</div>
 							<div class="map-lists">
-								<h3>AMENITIES</h3>
+								<h3 class="map-btns" data-target-image="map-amenities">AMENITIES</h3>
 								<ol>
 									<li>Madison Square Park</li>
 									<li>Mad. Sq. Eats</li>
 								</ol>
 							</div>
-							<div class="map-lists">
-								<h3 class="map-btns map-all">VIEW ALL</h3>
+							<div class="map-lists map-all-lists">
+								<h3 class="map-btns" data-target-image="map-all">VIEW ALL</h3>
 							</div>
 						</div>
 

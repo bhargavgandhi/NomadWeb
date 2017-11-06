@@ -283,15 +283,15 @@ a.navbar-brand {
               }
             }
           }
-          .properties-icon {
+          .portfolio-icon {
             &:before {
-              content: url("../images/properties-icon.svg");
+              content: url("../images/portfolio-icon.svg");
               width: 10px;
             }
 
             &:hover{
               &:before {
-                content: url("../images/properties-icon-active.svg");
+                content: url("../images/portfolio-icon-active.svg");
                 width: 10px;
               }
             }
@@ -378,9 +378,9 @@ a.navbar-brand {
               }
             }
 
-            .properties-icon {
+            .portfolio-icon {
               &:before {
-                content: url("../images/properties-icon-active.svg");
+                content: url("../images/portfolio-icon-active.svg");
                 width: 10px;
               }
             }

@@ -69,76 +69,6 @@ form {
     font-family: $archivoNarrow;
   }
 
-  .slant-end {
-    position: relative;
-
-    &:before {
-      content: "";
-      position: absolute;
-      right: 5px;
-      background-image: url("../images/contact-slant.png");
-      background-size: 44px 30px;
-      width: 44px;
-      height: 30px;
-      z-index: -1;
-    }
-  }
-
-  .slant-end-2 {
-    position: relative;
-
-    &:before {
-      content: "";
-      position: absolute;
-      right: -8px;
-      background-image: url("../images/contact-slant.png");
-      background-size: 44px 30px;
-      width: 44px;
-      height: 30px;
-      z-index: -1;
-    }
-  }
-
-  .slant-end-left {
-    position: relative;
-
-    &:before {
-      content: "";
-      position: absolute;
-      left: -10px;
-      background-image: url("../images/contact-slant.png");
-      background-size: 44px 30px;
-      width: 44px;
-      height: 30px;
-      z-index: -1;
-      -webkit-transform: rotate(180deg);
-      -moz-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-      -o-transform: rotate(180deg);
-      transform: rotate(180deg);
-    }
-  }
-
-  .slant-end-left-2 {
-    position: relative;
-
-    &:before {
-      content: "";
-      position: absolute;
-      left: 3px;
-      background-image: url("../images/contact-slant.png");
-      background-size: 44px 30px;
-      width: 44px;
-      height: 30px;
-      z-index: -1;
-      -webkit-transform: rotate(180deg);
-      -moz-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-      -o-transform: rotate(180deg);
-      transform: rotate(180deg);
-    }
-  }
-
   .slant-input {
     width: 90%;
     height: 25px;
@@ -273,7 +203,7 @@ form {
     border: 0;
     padding: 0 15px 0 10px;
     background: #249c84;
-    background-image: url("../images/submit-arrow-2x.png");
+    background-image: url("../images/submit-arrow.svg");
     background-repeat: no-repeat;
     background-size: 6px 15px;
     background-position: 90%;

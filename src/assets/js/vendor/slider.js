@@ -155,7 +155,7 @@
 			slider.usingCSS = slider.settings.useCSS && slider.settings.mode != 'fade' && (function(){
 				// create our test div element
 				var div = document.createElement('div');
-				// css transition properties
+				// css transition portfolio
 				var props = ['WebkitPerspective', 'MozPerspective', 'OPerspective', 'msPerspective'];
 				// test for each property
 				for(var i in props){

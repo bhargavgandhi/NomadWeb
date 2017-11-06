@@ -32,32 +32,27 @@ $(function() {
     $("#nav-icon3").toggleClass("open");
   });
 
-  $('.nav-toggle').click(function(){
+  $('.nav-toggle').click(function() {
     $('header').toggleClass('closeHead');
     $('.navbar-collapse').toggleClass('slideRightHeading');
 
     $('header .wrapper, .navbar-collapse, #mainNav, footer, .nav-toggle').removeClass('animation-delay');
   });
 
-  $('.homeSlides').bxSlider({
-    adaptiveHeight: true,
-    mode: 'fade',
-    captions: true,
-    pager: true,
-    pagerType: 'short',
-  });
+  $('.homeSlides').bxSlider({adaptiveHeight: true, mode: 'fade', captions: true, pager: true, pagerType: 'short'});
 
+  $('.map-lists-row .map-lists').css({'opacity': '0.5', 'filter': 'grayscale(100%)', '-webkit-filter': 'grayscale(100%)'})
+  $('.map-all-lists').css({'opacity': '1', 'filter': 'grayscale(0%)', '-webkit-filter': 'grayscale(0%)'})
 
-  // $('.map-btns').click(function() {
-  //
-  //   $('.map-images').css({
-  //     'opacity' : 0
-  //   });
-  //   $('.map-restaurants-image').css({
-  //     'opacity' : 1
-  //   });
-  // })
+  $('.map-lists .map-btns').click(function() {
+    var thisTarget = $(this).data('target-image'),
+      thisTargetImg = "." + thisTarget + "-image";
 
+    $('.map-lists').css({'opacity': '0.5', 'filter': 'grayscale(100%)', '-webkit-filter': 'grayscale(100%)'})
+    $(this).parent().css({'opacity': '1', 'filter': 'grayscale(0%)', '-webkit-filter': 'grayscale(0%)'})
 
+    $('.map-images').css({'opacity': 0});
+    $(thisTargetImg).css({'opacity': 1});
+  })
 
 });
