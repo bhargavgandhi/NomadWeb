@@ -88,12 +88,13 @@ blockquote {
     margin: 10px auto;
   }
 
-  footer{
+  footer {
     font-family: $archivoNarrow;
     color: inherit;
     margin-top: 1em;
-    &:before{
-      content: ""
+
+    &:before {
+      content: "";
     }
   }
 }
@@ -101,9 +102,11 @@ blockquote {
 .main-block {
   width: 80%;
   margin: 0 auto;
+  height: 100vh;
 
   svg {
     overflow: visible;
+    height: 95%;
 
     g {
       margin: 0 auto;
@@ -138,6 +141,27 @@ blockquote {
           }
         }
       }
+      .hide-image{
+        opacity: 0;
+      }
+      .show-image{
+        opacity: 1;
+      }
+
+      // .home-image-c{
+      //   &:hover{
+      //     &.home-image-a1, &.home-image-f1, &.home-image-h1 {
+      //       opacity: 0;
+      //     }
+      //     &.home-image-a2, &.home-image-f2, &.home-image-h2 {
+      //       opacity: 1;
+      //     }
+      //   }
+      // }
+
+      // .home-image-c:hover .home-image-a1{
+      //   opacity: 0;
+      // }
 
       .left-blocks {
         transform: translate3d(-100px, 0, 0);
@@ -179,7 +203,19 @@ blockquote {
 
       .left-para {
         width: 53%;
+        min-height: 200px;
         text-align: left;
+
+        .left-para-p {
+          font-family: $archivoNarrow;
+          font-size: 14px;
+          font-size: 0.875em;
+          line-height: 1.4;
+          text-align: left;
+          color: #000;
+          fill: #000;
+          letter-spacing: 0.3px;
+        }
 
         p {
           font-family: $archivoNarrow;

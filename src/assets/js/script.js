@@ -39,6 +39,27 @@ $(function() {
     $('header .wrapper, .navbar-collapse, #mainNav, footer, .nav-toggle').removeClass('animation-delay');
   });
 
+  $('a[href^="#"]').click(function (event) {
+    // The id of the section we want to go to.
+    var id = $(this).attr("href");
+
+    // An offset to push the content down from the top.
+    var offset = 0;
+
+    // Our scroll target : the top position of the
+    // section that has the id referenced by our href.
+    var target = $(id).offset().top - offset;
+
+    // The magic...smooth scrollin" goodness.
+    $("html, body").animate({
+      scrollTop: target
+    }, 500);
+
+    //prevent the page from jumping down to our section.
+    event.preventDefault();
+  });
+
+
   $('.homeSlides').bxSlider({adaptiveHeight: true, mode: 'fade', captions: true, pager: true, pagerType: 'short'});
 
   $('.map-lists-row .map-lists').css({'opacity': '0.5', 'filter': 'grayscale(100%)', '-webkit-filter': 'grayscale(100%)'})
@@ -53,6 +74,19 @@ $(function() {
 
     $('.map-images').css({'opacity': 0});
     $(thisTargetImg).css({'opacity': 1});
+  })
+
+
+
+  //Home Image Mouseover
+
+  $('.home-image-c').mouseover(function(){
+    $('.home-image-a1, .home-image-f1, .home-image-h1').addClass("hide-image");
+    $('.home-image-a2, .home-image-f2, .home-image-h2').addClass("show-image");
+
+  }).mouseout(function(){
+    $('.home-image-a1, .home-image-f1, .home-image-h1').removeClass("hide-image");
+    $('.home-image-a2, .home-image-f2, .home-image-h2').removeClass("show-image");
   })
 
 });

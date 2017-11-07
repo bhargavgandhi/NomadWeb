@@ -11,6 +11,12 @@
   vertical-align: top;
 }
 
+#destination-points,
+#transportation {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .map-list-block-main {
   margin-left: 3%;
 
@@ -35,7 +41,8 @@
 
   .map-transport-lists {
     .map-lists {
-        margin: 0.5em 0;
+      margin: 0.5em 0;
+
       img {
         max-width: 70%;
       }
@@ -85,7 +92,7 @@
     }
   }
 
-  .map-btns{
+  .map-btns {
     cursor: pointer;
   }
 }
