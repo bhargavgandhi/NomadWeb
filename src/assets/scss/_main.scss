@@ -17,24 +17,35 @@ $gridgap: 7.5%;
   clear: both;
   display: block;
   font-family: $fontStack;
-  font-size: 14px;
-  font-size: 0.875em;
-  line-height: 1.29;
-  letter-spacing: 0.1px;
-  text-align: center;
-  color: #000000;
-  padding: 1.4em;
+  font-size: 9.4px;
+  font-size: 0.58em;
+	font-weight: bold;
+	line-height: 2;
+	letter-spacing: -0.2px;
+	text-align: center;
+	color: #6f6e6e;
+  padding: 5px;
   background: transparent;
-  border: 1px solid #c09260;
+  border: 1px solid #6f6e6e;
   background: transparent;
-  margin-right: 3em;
   float: none !important;
   outline: none;
-  max-width: 220px;
-  max-width: 16em;
+  width: 120px;
+  width: 14em;
   margin: 10px auto 0;
+  margin-right: 15px;
   -webkit-font-smoothing: antialiased;
   border-radius: 0 !important;
+
+  img {
+    margin: 0 auto;
+    padding: 1px;
+  }
+}
+
+.btn-download{
+  display: inline-block;
+  vertical-align: top;
 }
 
 img {
@@ -57,6 +68,9 @@ img {
 
 .green-text {
   color: #249c84;
+}
+.grey-text {
+  color: #a6a6a5;
 }
 
 h4 {
@@ -210,6 +224,7 @@ blockquote {
           font-family: $archivoNarrow;
           font-size: 14px;
           font-size: 0.875em;
+
           line-height: 1.4;
           text-align: left;
           color: #000;
@@ -221,6 +236,7 @@ blockquote {
           font-family: $archivoNarrow;
           font-size: 14px;
           font-size: 0.875em;
+          font-size: 78%;
           line-height: 1.4;
           text-align: left;
           color: #000;

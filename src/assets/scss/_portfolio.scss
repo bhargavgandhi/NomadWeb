@@ -2,7 +2,114 @@
      Author: Bhargav Gandhi (BG)
      Description: portfolio.scss
      =========================== */
-
 .portfolio-block {
   margin: 0 auto;
+
+  h2{
+    margin: 10px auto 15px;
+  }
+}
+
+.portfolio-details {
+  vertical-align: top;
+  margin-top: 2.5em;
+
+  h3 {
+    font-size: 15px;
+    font-size: 0.94em;
+    font-weight: bold;
+    line-height: 2.4;
+    letter-spacing: -0.3px;
+    text-align: left;
+    color: #249c84;
+  }
+
+  p {
+    font-family: $archivoNarrow;
+    font-size: 15px;
+    font-size: 0.94em;
+    line-height: 1.4;
+    letter-spacing: -0.2px;
+    text-align: left;
+    color: #000000;
+  }
+
+  ul {
+    vertical-align: top;
+    li {
+      font-family: $archivoNarrow;
+      font-size: 11px;
+      font-size: 0.7em;
+      line-height: 1.64;
+      text-align: left;
+      color: #6f6e6e;
+    }
+  }
+}
+
+.portfolio-nav {
+  margin: 8% auto;
+
+  h2 {
+    font-size: 83px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: -1.6px;
+    text-align: left;
+    color: #a6a6a5;
+    padding: 10px 1.35em 0;
+    margin: 25px 0;
+    position: relative;
+    z-index: 10;
+    transition: all 0.5s cubic-bezier(0.74, 0.09, 0.14, 1.04);
+
+    a {
+      color: inherit;
+      font-size: inherit;
+      text-decoration: none;
+
+      &:active,
+      &:focus,
+      &:hover,
+      &:visited {
+        color: inherit;
+        font-size: inherit;
+        text-decoration: none;
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      background: #000;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 100%;
+      z-index: -1;
+      transition: all 0.5s cubic-bezier(0.7, 0.1, 0.15, 1.00);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 10%;
+      top: 0;
+      border-bottom: 93px solid #fff;
+      border-right: 75px solid #fff;
+      border-color: transparent #fff transparent transparent;
+    }
+
+    &:hover {
+      color: #249c84;
+
+      &:before {
+        width: 90%;
+      }
+
+      &:after {
+        right: 10%;
+      }
+    }
+  }
 }
