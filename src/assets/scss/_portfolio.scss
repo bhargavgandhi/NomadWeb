@@ -5,9 +5,12 @@
 .portfolio-block {
   margin: 0 auto;
 
-  h2{
+  h2 {
     margin: 10px auto 15px;
   }
+}
+.portfolio-slides{
+  transition: all 0.1s cubic-bezier(0.74, 0.09, 0.14, 1.04);
 }
 
 .portfolio-details {
@@ -32,10 +35,13 @@
     letter-spacing: -0.2px;
     text-align: left;
     color: #000000;
+    max-width: 95%;
   }
 
   ul {
     vertical-align: top;
+    list-style: none;
+
     li {
       font-family: $archivoNarrow;
       font-size: 11px;
@@ -43,6 +49,12 @@
       line-height: 1.64;
       text-align: left;
       color: #6f6e6e;
+      padding-left: 0.5em;
+      text-indent: -0.5em;
+
+      &:before {
+        content: ". ";
+      }
     }
   }
 }

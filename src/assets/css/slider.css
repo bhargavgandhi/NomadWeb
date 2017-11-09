@@ -10,7 +10,7 @@
 
 .bx-wrapper {
   position: relative;
-  margin: 0 auto 60px;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -38,11 +38,11 @@
 
 .bx-wrapper .bx-controls-auto, .bx-wrapper .bx-pager {
   position: absolute;
-  right: 0;
-  bottom: -12px;
-  bottom: -0.8em;
-  width: 10em;
-  max-width: 118px;
+    right: 1%;
+    bottom: -12px;
+    bottom: -5.5%;
+    width: 8em;
+    max-width: 75px;
 }
 
 /* LOADER */
@@ -62,16 +62,18 @@
 
 .bx-wrapper .bx-pager {
   padding-top: 1.25em;
-  padding-top: 20px;
-  color: #000500;
-  text-align: center;
-  font-family: "MaisonNeue-Light", sans-serif;
-  font-size: .85em;
-  font-size: 14px;
-  font-size: 0.875em;
-  font-weight: 300;
-  line-height: 1.29;
-  letter-spacing: 0.1px;
+    padding-top: 20px;
+    color: #000500;
+    text-align: center;
+    font-family: "TradeGothic-BoldCondTwenty",sans-serif;
+    font-weight: 300;
+    font-size: 11px;
+    font-size: 0.7em;
+    line-height: 1.64;
+    letter-spacing: 1.1px;
+    text-align: center;
+    color: #249c84;
+    -webkit-font-smoothing: antialiased;
 }
 
 .bx-wrapper .bx-controls-auto .bx-controls-auto-item, .bx-wrapper .bx-pager .bx-pager-item {
@@ -98,20 +100,16 @@
 /* DIRECTION CONTROLS (NEXT / PREV) */
 
 .bx-wrapper .bx-prev {
-  right: 6%;
-  opacity: 0.9;
-  background: url(../images/arrow-left.svg) no-repeat;
-  /* margin-left: -70px; margin-left: -4.4em; */
+  right: 8%;
+opacity: 0.9;
+background: url(../images/arrow-left.svg) no-repeat;
 }
 
 .bx-wrapper .bx-next {
-  right: 0;
-  bottom: 3px !important;
-  bottom: 0.2em !important;
-  opacity: 0.9;
-  background: url(../images/arrow-left.svg) no-repeat;
-  transform: rotate(180deg);
-  /* margin-left: 30px; margin-left: 1.85em; */
+  right: 2.5%;
+      opacity: 0.9;
+      background: url('../images/arrow-left.svg') no-repeat;
+      transform: rotate(180deg);
 }
 
 .bx-wrapper .bx-prev:hover {
@@ -124,17 +122,16 @@
 
 .bx-wrapper .bx-controls-direction a {
   z-index: 99;
-  position: absolute;
-  bottom: 0.15em;
-  bottom: 2px;
-  width: 40px;
-  width: 2.5em;
-  height: 14px;
-  margin-top: -20px;
-  margin-top: -1.25em;
-  outline: 0;
-  text-indent: -9999px;
-  /* top: 64%; */
+    position: absolute;
+    bottom: -22px;
+    bottom: -5%;
+    width: 6px;
+    width: 6px;
+    height: 16px;
+    margin-top: 0;
+    outline: 0;
+    text-indent: -9999px;
+    vertical-align: middle;
 }
 
 .bx-wrapper .bx-controls-direction a.disabled {
