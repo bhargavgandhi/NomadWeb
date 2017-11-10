@@ -120,10 +120,11 @@
 				</nav>
 
 				<div class="nav-search animated2 animation-delay">
-					<input type="text" name="search" id="search" />
 					<img class="search-icon" src="assets/images/search.svg" alt="search icon" width="100%" />
-					<img class="bar-icon" src="assets/images/bar.svg" alt="bar icon" width="100%" />
-					<img class="search-close-icon" src="assets/images/close.svg" alt="search close icon" width="100%" />
+					<input type="text" name="search" id="search" />
+
+					<!-- <img class="bar-icon" src="assets/images/bar.svg" alt="bar icon" width="100%" />
+					<img class="search-close-icon" src="assets/images/close.svg" alt="search close icon" width="100%" /> -->
 				</div>
 				<a class="nav-toggle animated2 animation-delay">
 					<img src="assets/images/menu-toggle.svg" alt="menu toggle image" width="20" />
@@ -150,6 +151,13 @@
 			</div>
 		</header>
 
+		<!-- Next Page Nav Arrow -->
+		<div class="next-nav-main">
+			<a href="portfolio.html">
+				<img src="assets/images/arrow-right.svg" width="10px" alt="next navigation" />
+			</a>
+		</div>
+
 		<section class="main-container">
 			<section class="row">
 				<div class="main-block">
@@ -157,19 +165,29 @@
 
 						<g id="main-group">
 							<a class="left-blocks home-image-a">
-								<image x="0" y="0" width="291" height="292" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/home1@2x.png" class="home-image-a1">
+								<image x="0" y="0" width="291" height="292" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/home1@2x.png" class="main-images image-main">
 								</image>
-								<image x="0" y="0" width="291" height="292" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/30w26-1.png" class="home-image-a2">
+								<image x="0" y="0" width="291" height="292" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/30w26-1.png" class="main-images image-30w26">
 								</image>
+								<image x="0" y="0" width="291" height="292" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/12w27-1@2x.png" class="main-images image-12w27">
+								</image>
+								<image x="0" y="0" width="291" height="292" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/12w21-1@2x.png" class="main-images image-12w21">
+								</image>
+								<image x="0" y="0" width="291" height="292" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/6e32-1@2x.png" class="main-images image-6e32">
+								</image>
+								<image x="0" y="0" width="291" height="292" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/401park-1@2x.png" class="main-images image-401park">
+								</image>
+
+
 							</a>
 
-							<a class="left-blocks2 home-image home-image-b">
+							<a class="left-blocks2 home-image home-image-change" data-target="12w27">
 								<image x="0" y="320" width="319" height="34" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/12w27.svg" class="home-image-a home-image-b1">
 								</image>
 								<image x="0" y="320" width="319" height="34" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/12w27-b.svg" class="home-image-b home-image-b2">
 								</image>
 							</a>
-							<a class="left-blocks2 home-image home-image-c">
+							<a class="left-blocks2 home-image home-image-change" data-target="30w26">
 								<image x="0" y="380" width="346" height="34" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/30w26.svg" class="home-image-a home-image-c1">
 								</image>
 								<image x="0" y="380" width="346" height="34" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/30w26-b.svg" class="home-image-b home-image-c2">
@@ -190,7 +208,7 @@
 								</foreignObject>
 							</a>
 
-							<a class="left-blocks2 home-image home-image-d">
+							<a class="left-blocks2 home-image home-image-change" data-target="12w21">
 								<image x="0" y="705" width="481" height="34" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/12w21.svg"
 								class="home-image-a home-image-d1">
 								</image>
@@ -200,7 +218,7 @@
 							</a>
 
 						<!-- Right Side -->
-						<a class="right-blocks2 home-image home-image-e">
+						<a class="right-blocks2 home-image home-image-change" data-target="6e32">
 							<image x="200" y="0" width="578" height="34" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/6e32.svg" class="home-image-a home-image-e1">
 							</image>
 							<image x="200" y="0" width="578" height="34" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/6e32-b.svg" class="home-image-b home-image-e2">
@@ -208,13 +226,22 @@
 						</a>
 
 						<a class="right-blocks home-image-f">
-							<image x="228" y="65" width="550" height="162" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/home2.png" class="home-image-f1">
+							<image x="228" y="65" width="550" height="162" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/home2@2x.png" class="main-images image-main">
 							</image>
-							<image x="228" y="65" width="550" height="162" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/30w26-2.png" class="home-image-f2">
+							<image x="228" y="65" width="550" height="162" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/30w26-2.png" class="main-images image-30w26">
+							</image>
+							<image x="228" y="65" width="550" height="162" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/12w27-2@2x.png" class="main-images image-12w27">
+							</image>
+							<image x="228" y="65" width="550" height="162" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/12w21-2@2x.png" class="main-images image-12w21">
+							</image>
+
+							<image x="228" y="65" width="550" height="162" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/6e32-2@2x.png" class="main-images image-6e32">
+							</image>
+							<image x="228" y="65" width="550" height="162" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/401park-2@2x.png" class="main-images image-401park">
 							</image>
 						</a>
 
-						<a class="right-blocks2 home-image home-image-g">
+						<a class="right-blocks2 home-image home-image-change" data-target="401park">
 							<image x="310" y="258" width="469" height="34" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/401park.svg" class="home-image-a home-image-g1">
 							</image>
 							<image x="310" y="258" width="469" height="34" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/401park-b.svg" class="home-image-b home-image-g2">
@@ -222,9 +249,17 @@
 						</a>
 
 						<a class="right-blocks home-image-h">
-							<image x="336" y="320" width="442" height="421" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/home3.png" class="home-image-h1">
+							<image x="336" y="320" width="442" height="421" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/home3@2x.png" class="main-images image-main">
 							</image>
-							<image x="336" y="320" width="442" height="421" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/30w26-3.png" class="home-image-h2">
+							<image x="336" y="320" width="442" height="421" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/30w26-3.png" class="main-images image-30w26">
+							</image>
+							<image x="336" y="320" width="442" height="421" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/12w27-3@2x.png" class="main-images image-12w27">
+							</image>
+							<image x="336" y="320" width="442" height="421" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/12w21-3@2x.png" class="main-images image-12w21">
+							</image>
+							<image x="336" y="320" width="442" height="421" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/6e32-3@2x.png" class="main-images image-6e32">
+							</image>
+							<image x="336" y="320" width="442" height="421" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/401park-3@2x.png" class="main-images image-401park">
 							</image>
 						</a>
 

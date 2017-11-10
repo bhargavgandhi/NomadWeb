@@ -38,11 +38,11 @@
 
 .bx-wrapper .bx-controls-auto, .bx-wrapper .bx-pager {
   position: absolute;
-    right: 1%;
+    right: 4.5%;
     bottom: -12px;
     bottom: -5.5%;
-    width: 8em;
-    max-width: 75px;
+    /*width: 8em;
+    max-width: 75px;*/
 }
 
 /* LOADER */

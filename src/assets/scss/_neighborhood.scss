@@ -17,6 +17,64 @@
   margin: 0 auto;
 }
 
+.hide-image {
+  opacity: 0;
+}
+
+.show-image {
+  opacity: 1;
+}
+
+.hide-list {
+  display: none;
+}
+
+#location-maps {
+  margin: 5% auto;
+}
+
+.location-map-navs {
+  text-align: center;
+
+  .btn-maps {
+    font-size: 11px;
+    font-size: 0.7em;
+  }
+
+  .destination-icon {
+    &:before {
+      content: url("../images/destination-icon.svg");
+      width: 8px;
+      margin-right: 5px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &:hover {
+      &:before {
+        content: url("../images/destination-icon-active.svg");
+      }
+    }
+  }
+
+  .transport-icon {
+    &:before {
+      content: url("../images/transport-icon.svg");
+      width: 10px;
+      margin-right: 5px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &:hover{
+      &:before {
+        content: url("../images/transport-icon-active.svg");
+      }
+    }
+  }
+
+
+}
+
 .map-list-block-main {
   margin-left: 3%;
 

@@ -80,20 +80,42 @@ $(function() {
     $('#search').addClass('hide-search')
   });
   $('.search-icon').click(function(){
-    $('#search').removeClass('hide-search')
+    $('#search').toggleClass('hide-search')
+  });
+
+  $('.scroll-navs a').click(function(){
+    $('.scroll-navs a').removeClass('deactive');
+    $(this).toggleClass('deactive');
   });
 
 
 
   //Home Image Mouseover
-
-  $('.home-image-c').mouseover(function(){
-    $('.home-image-a1, .home-image-f1, .home-image-h1').addClass("hide-image");
-    $('.home-image-a2, .home-image-f2, .home-image-h2').addClass("show-image");
+  var imgTarget;
+  $('.home-image-change').mouseover(function(){
+    imgTarget = $(this).data('target');
+    $('.main-images').addClass("hide-image");
+    $('.image-' + imgTarget).addClass("show-image");
 
   }).mouseout(function(){
-    $('.home-image-a1, .home-image-f1, .home-image-h1').removeClass("hide-image");
-    $('.home-image-a2, .home-image-f2, .home-image-h2').removeClass("show-image");
-  })
+    $('.main-images').removeClass("hide-image");
+    $('.image-' + imgTarget).removeClass("show-image");
+  });
+
+
+  $('.btn-maps').click(function(){
+    var mapTarget = $(this).data('target');
+    console.log(mapTarget);
+    $('.location-maps').removeClass("show-image");
+    $('.location-maps').addClass("hide-image");
+    $("."+mapTarget+"-map").removeClass("hide-image").addClass("show-image");
+
+    $('.location-map-list').addClass("hide-list");
+    $("."+mapTarget+"-list").removeClass("hide-list");
+  });
+
+
+
+
 
 });

@@ -6,6 +6,39 @@ header {
   margin-bottom: 60px;
 }
 
+.next-nav-main {
+  position: fixed;
+  right: 4.5em;
+  top: 2em;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.74, 0.09, 0.14, 1.04);
+  animation-name: nextNavShow;
+  animation-delay: 2.5s;
+}
+
+.scroll-navs {
+  position: fixed;
+  right: 4.5em;
+  bottom: 2em;
+  opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.74, 0.09, 0.14, 1.04);
+  animation-name: nextNavShow;
+  animation-delay: 2.5s;
+  a{
+    margin: 15px auto;
+    display: block;
+  }
+  a.deactive{
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+  }
+}
+
 .animated2 {
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -72,14 +105,14 @@ header {
       img {
         max-width: 15px;
         margin: 0 2px;
-
       }
 
       .bar-icon {
         max-width: 1px;
         height: 14px;
       }
-      .search-icon{
+
+      .search-icon {
         cursor: pointer;
       }
 
@@ -90,6 +123,7 @@ header {
 
       input {
         width: 118px;
+        width: 10em;
         height: 20px;
         background: #222221;
         border: 0;
@@ -107,9 +141,10 @@ header {
         -webkit-font-smoothing: antialiased;
         transition: all 0.2s cubic-bezier(0.74, 0.09, 0.14, 1.04);
       }
-      .hide-search{
-        width:0;
-        padding:0;
+
+      .hide-search {
+        width: 0;
+        padding: 0;
       }
     }
 
@@ -121,7 +156,7 @@ header {
       background: #000;
       text-decoration: none;
       //animation-name: initNavToggleAnim;
-      //transform: rotate(180deg);
+      transform: rotate(180deg);
       cursor: pointer;
       // animation: initNavToggleAnim 1s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
       // animation-delay: 1.5s;
@@ -199,9 +234,9 @@ body.home {
     animation-name: initHeaderAnimMain;
 
     #mainNav,
+    .nav-search,
     .navbar-collapse,
-    footer,
-    .nav-search {
+    footer {
       animation-name: initHeaderAnim;
       //animation-delay:1.5s;
       transform: translate3d(-1000px,0,0);
@@ -219,9 +254,9 @@ header.animate {
     animation-name: initHeaderAnimMain;
 
     #mainNav,
+    .nav-search,
     .navbar-collapse,
-    footer,
-    .nav-search {
+    footer {
       animation-name: initHeaderAnim;
       //animation-delay:1.5s;
       transform: translate3d(-1000px,0,0);
@@ -242,13 +277,13 @@ header.closeHead {
 
     .nav-toggle {
       animation-name: initNavToggleAnimRev;
-      transform: rotate(180deg);
+      transform: rotate(0deg);
     }
 
     #mainNav,
+    .nav-search,
     .navbar-collapse,
-    footer,
-    .nav-search {
+    footer {
       width: 350px;
       animation-name: initHeaderAnimRev;
       transform: translate3d(-1000px,0,0);
@@ -363,6 +398,23 @@ header {
     padding-right: 0;
   }
 }
+
+
+
+@keyframes nextNavShow {
+  0% {
+    opacity:0;
+    right: 0em;
+  }
+
+  100% {
+    opacity: 1;
+    right: 4.5em;
+  }
+}
+
+
+
 @keyframes slideRightHead {
   0% {
     transform: translate3d(-100%,0,0);
@@ -415,22 +467,22 @@ header {
 @keyframes initNavToggleAnim {
   0% {
     right: -1em;
-    transform: rotate(180deg);
+    //transform: rotate(180deg);
   }
 
   100% {
     right: -1em;
-    transform: rotate(0deg);
+    //transform: rotate(0deg);
   }
 }
 @keyframes initNavToggleAnimRev {
   0% {
     right: -1em;
-    transform: rotate(0deg);
+    //transform: rotate(0deg);
   }
 
   100% {
     right: -1em;
-    transform: rotate(180deg);
+    //transform: rotate(180deg);
   }
 }
