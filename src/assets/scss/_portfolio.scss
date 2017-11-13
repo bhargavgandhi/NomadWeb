@@ -125,3 +125,43 @@
     }
   }
 }
+
+
+@media screen and (min-width: 300px) and (max-width: 999px){
+  .portfolio-nav {
+    margin: 8% auto;
+
+    h2 {
+      font-size: 48px;
+      font-weight: bold;
+      line-height: 0.81;
+      letter-spacing: -0.9px;
+      padding: 10px 0.5em 0;
+      margin: 20px 0;
+      position: relative;
+      z-index: 10;
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 10%;
+        top: 0;
+        border-bottom: 60px solid #fff;
+        border-right: 40px solid #fff;
+        border-color: transparent #fff transparent transparent;
+      }
+
+      &:hover {
+        color: #249c84;
+
+        &:before {
+          width: 90%;
+        }
+
+        &:after {
+          right: 10%;
+        }
+      }
+    }
+  }
+}

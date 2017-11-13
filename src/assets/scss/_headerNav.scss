@@ -6,39 +6,6 @@ header {
   margin-bottom: 60px;
 }
 
-.next-nav-main {
-  position: fixed;
-  right: 4.5em;
-  top: 2em;
-  opacity: 0;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  animation-timing-function: cubic-bezier(0.74, 0.09, 0.14, 1.04);
-  animation-name: nextNavShow;
-  animation-delay: 2.5s;
-}
-
-.scroll-navs {
-  position: fixed;
-  right: 4.5em;
-  bottom: 2em;
-  opacity: 0;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  animation-timing-function: cubic-bezier(0.74, 0.09, 0.14, 1.04);
-  animation-name: nextNavShow;
-  animation-delay: 2.5s;
-  a{
-    margin: 15px auto;
-    display: block;
-  }
-  a.deactive{
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-  }
-}
-
 .animated2 {
   animation-duration: 1s;
   animation-fill-mode: both;
@@ -51,245 +18,6 @@ header {
 
 .slideRightHeading {
   animation: slideRightHead 1s both;
-}
-
-header {
-  width: 18%;
-  z-index: 999999;
-  display: inline-block;
-  position: fixed;
-  background: transparent;
-  height: 100vh;
-  height: 100%;
-  vertical-align: top;
-
-  .wrapper {
-    position: relative;
-    width: 0;
-    width: 100%;
-    height: 100%;
-    min-height: 50px;
-    padding: 2em 0.6em 0 2.5em;
-    color: #fff;
-    background: #000;
-    display: block;
-    //animation-name: initHeaderAnimMain;
-    z-index: 99;
-    //animation-timing-function: ease-in-out;
-    // -moz-transition: all 0.25s ease-in-out;
-    // -o-transition: all 0.25s ease-in-out;
-    // -webkit-transition: all 0.25s ease-in-out;
-    // transition: all 0.25s ease-in-out;
-    // animation: initHeaderAnimMain 1s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
-    // animation-delay: 1.5s;
-    #mainNav,
-    .navbar-collapse,
-    footer {
-      //animation-name: initHeaderAnim;
-      //animation-delay:1.5s;
-      //transform: translate3d(-1000px,0,0);
-      // animation: initHeaderAnim 1s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
-    }
-
-    .nav-search {
-      position: absolute;
-      bottom: 11%;
-      right: 1em;
-
-      img,
-      input {
-        display: inline-block;
-        vertical-align: middle;
-      }
-
-      img {
-        max-width: 15px;
-        margin: 0 2px;
-      }
-
-      .bar-icon {
-        max-width: 1px;
-        height: 14px;
-      }
-
-      .search-icon {
-        cursor: pointer;
-      }
-
-      .search-close-icon {
-        max-width: 10px;
-        cursor: pointer;
-      }
-
-      input {
-        width: 118px;
-        width: 10em;
-        height: 20px;
-        background: #222221;
-        border: 0;
-        padding: 5px;
-        margin: 0;
-        border-radius: 0 !important;
-        outline: none;
-        font-family: $archivoNarrow;
-        font-size: 12px;
-        font-size: 0.8em;
-        line-height: 1.75;
-        letter-spacing: -0.1px;
-        text-align: left;
-        color: #6f6e6e;
-        -webkit-font-smoothing: antialiased;
-        transition: all 0.2s cubic-bezier(0.74, 0.09, 0.14, 1.04);
-      }
-
-      .hide-search {
-        width: 0;
-        padding: 0;
-      }
-    }
-
-    .nav-toggle {
-      position: absolute;
-      bottom: 10%;
-      right: -1em;
-      padding: 0;
-      background: #000;
-      text-decoration: none;
-      //animation-name: initNavToggleAnim;
-      transform: rotate(180deg);
-      cursor: pointer;
-      // animation: initNavToggleAnim 1s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
-      // animation-delay: 1.5s;
-      &:active,
-      &:focus,
-      &:hover,
-      &:visited {
-        text-decoration: none;
-      }
-    }
-
-    footer {
-      position: absolute;
-      bottom: 1em;
-      width: 100%;
-      margin: 0 auto !important;
-
-      &.row {
-        width: 100%;
-        margin: 0 auto !important;
-      }
-
-      div {
-        width: 100%;
-        margin: 0 auto;
-
-        .social-links {
-          ul {
-            list-style: none;
-
-            li {
-              display: inline-block;
-              margin: 5px 6px;
-              font-size: 18px;
-              font-size: 1.125em;
-              font-style: normal;
-              font-weight: 500;
-              font-stretch: normal;
-              line-height: normal;
-              letter-spacing: normal;
-
-              &:last-child {
-                margin-right: 0;
-              }
-
-              i {
-                color: #6f6e6e;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .logo-secondary {
-    position: absolute;
-    top: 0;
-    z-index: 10;
-    padding: 2em 2.5em 0;
-
-    .navbar-brand {
-      padding: 0;
-    }
-
-    img {
-      width: 50px;
-      width: 3.125em;
-    }
-  }
-}
-
-body.home {
-  .wrapper {
-    animation-name: initHeaderAnimMain;
-
-    #mainNav,
-    .nav-search,
-    .navbar-collapse,
-    footer {
-      animation-name: initHeaderAnim;
-      //animation-delay:1.5s;
-      transform: translate3d(-1000px,0,0);
-      // animation: initHeaderAnim 1s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
-    }
-
-    .nav-toggle {
-      animation-name: initNavToggleAnim;
-    }
-  }
-}
-
-header.animate {
-  .wrapper {
-    animation-name: initHeaderAnimMain;
-
-    #mainNav,
-    .nav-search,
-    .navbar-collapse,
-    footer {
-      animation-name: initHeaderAnim;
-      //animation-delay:1.5s;
-      transform: translate3d(-1000px,0,0);
-      // animation: initHeaderAnim 1s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
-    }
-
-    .nav-toggle {
-      animation-name: initNavToggleAnim;
-    }
-  }
-}
-
-header.closeHead {
-  .wrapper {
-    width: 0;
-    padding: 2em 0.6em 0;
-    animation-name: initHeaderAnimMainRev;
-
-    .nav-toggle {
-      animation-name: initNavToggleAnimRev;
-      transform: rotate(0deg);
-    }
-
-    #mainNav,
-    .nav-search,
-    .navbar-collapse,
-    footer {
-      width: 350px;
-      animation-name: initHeaderAnimRev;
-      transform: translate3d(-1000px,0,0);
-      pointer-events: none;
-    }
-  }
 }
 
 header {
@@ -398,13 +126,465 @@ header {
     padding-right: 0;
   }
 }
+//Media Query for mobile / tablet
+@media screen and (min-width: 300px) and (max-width: 999px) {
+  .next-nav-main {
+    display: none;
+  }
 
+  header {
+    width: 100%;
+    z-index: 999999;
+    display: inline-block;
+    background: transparent;
+    vertical-align: top;
 
+    .wrapper {
+      position: relative;
+      width: 0;
+      width: 100%;
+      min-height: 10px;
+      padding: 0;
+      color: #fff;
+      background: #000;
+      display: block;
+      z-index: 99;
 
+      #mainNav,
+      .navbar-collapse,
+      footer {}
+
+      .nav-search {
+        position: absolute;
+        bottom: 11%;
+        right: 1em;
+        display: none;
+
+        img,
+        input {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        img {
+          max-width: 15px;
+          margin: 0 2px;
+        }
+
+        .bar-icon {
+          max-width: 1px;
+          height: 14px;
+        }
+
+        .search-icon {
+          cursor: pointer;
+        }
+
+        .search-close-icon {
+          max-width: 10px;
+          cursor: pointer;
+        }
+
+        input {
+          width: 118px;
+          width: 10em;
+          height: 20px;
+          background: #222221;
+          border: 0;
+          padding: 5px;
+          margin: 0;
+          border-radius: 0 !important;
+          outline: none;
+          font-family: $archivoNarrow;
+          font-size: 12px;
+          font-size: 0.8em;
+          line-height: 1.75;
+          letter-spacing: -0.1px;
+          text-align: left;
+          color: #6f6e6e;
+          -webkit-font-smoothing: antialiased;
+          transition: all 0.2s cubic-bezier(0.74, 0.09, 0.14, 1.04);
+        }
+
+        .hide-search {
+          width: 0;
+          padding: 0;
+        }
+      }
+
+      .nav-toggle {
+        display: none;
+        position: absolute;
+        bottom: 10%;
+        right: -1em;
+        padding: 0;
+        background: #000;
+        text-decoration: none;
+        //animation-name: initNavToggleAnim;
+        transform: rotate(180deg);
+        cursor: pointer;
+        // animation: initNavToggleAnim 1s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
+        // animation-delay: 1.5s;
+        &:active,
+        &:focus,
+        &:hover,
+        &:visited {
+          text-decoration: none;
+        }
+      }
+
+      footer {
+        position: relative;
+        bottom: 1em;
+        width: 100%;
+        margin: 0 auto !important;
+        padding: 2em 0 0;
+
+        &.row {
+          width: 100%;
+          margin: 0 auto !important;
+        }
+
+        div {
+          width: 100%;
+          margin: 0 auto;
+
+          .social-links {
+            ul {
+              list-style: none;
+
+              li {
+                display: inline-block;
+                margin: 5px 6px;
+                font-size: 18px;
+                font-size: 1.125em;
+                font-style: normal;
+                font-weight: 500;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+
+                &:first-child {
+                  margin-left: 0;
+                }
+
+                &:last-child {
+                  margin-right: 0;
+                }
+
+                i {
+                  color: #6f6e6e;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .navbar {
+        min-height: 0;
+      }
+    }
+
+    .logo-secondary {
+      position: absolute;
+      top: 0;
+      z-index: 10;
+      padding: 2em 1.5em;
+
+      .navbar-brand {
+        padding: 0;
+      }
+
+      img {
+        width: 62px;
+        width: 3.88em;
+      }
+    }
+  }
+}
+//Media Query for Desktop Starts
+@media screen and (min-width: 1000px) {
+  .next-nav-main {
+    position: fixed;
+    right: 4.5em;
+    top: 2em;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.74, 0.09, 0.14, 1.04);
+    animation-name: nextNavShow;
+    animation-delay: 2.5s;
+  }
+
+  .scroll-navs {
+    position: fixed;
+    right: 4.5em;
+    bottom: 2em;
+    opacity: 0;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.74, 0.09, 0.14, 1.04);
+    animation-name: nextNavShow;
+    animation-delay: 2.5s;
+
+    a {
+      margin: 15px auto;
+      display: block;
+    }
+
+    a.deactive {
+      filter: grayscale(100%);
+      -webkit-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+    }
+  }
+
+  header {
+    width: 18%;
+    z-index: 999999;
+    display: inline-block;
+    position: fixed;
+    background: transparent;
+    height: 100vh;
+    height: 100%;
+    vertical-align: top;
+
+    .wrapper {
+      position: relative;
+      width: 0;
+      width: 100%;
+      height: 100%;
+      min-height: 50px;
+      padding: 2em 0.6em 0 2.5em;
+      color: #fff;
+      background: #000;
+      display: block;
+      //animation-name: initHeaderAnimMain;
+      z-index: 99;
+      //animation-timing-function: ease-in-out;
+      // -moz-transition: all 0.25s ease-in-out;
+      // -o-transition: all 0.25s ease-in-out;
+      // -webkit-transition: all 0.25s ease-in-out;
+      // transition: all 0.25s ease-in-out;
+      // animation: initHeaderAnimMain 1s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
+      // animation-delay: 1.5s;
+      #mainNav,
+      .navbar-collapse,
+      footer {
+        //animation-name: initHeaderAnim;
+        //animation-delay:1.5s;
+        //transform: translate3d(-1000px,0,0);
+        // animation: initHeaderAnim 1s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
+      }
+
+      .nav-search {
+        position: absolute;
+        bottom: 11%;
+        right: 1em;
+
+        img,
+        input {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        img {
+          max-width: 15px;
+          margin: 0 2px;
+        }
+
+        .bar-icon {
+          max-width: 1px;
+          height: 14px;
+        }
+
+        .search-icon {
+          cursor: pointer;
+        }
+
+        .search-close-icon {
+          max-width: 10px;
+          cursor: pointer;
+        }
+
+        input {
+          width: 118px;
+          width: 10em;
+          height: 20px;
+          background: #222221;
+          border: 0;
+          padding: 5px;
+          margin: 0;
+          border-radius: 0 !important;
+          outline: none;
+          font-family: $archivoNarrow;
+          font-size: 12px;
+          font-size: 0.8em;
+          line-height: 1.75;
+          letter-spacing: -0.1px;
+          text-align: left;
+          color: #6f6e6e;
+          -webkit-font-smoothing: antialiased;
+          transition: all 0.2s cubic-bezier(0.74, 0.09, 0.14, 1.04);
+        }
+
+        .hide-search {
+          width: 0;
+          padding: 0;
+        }
+      }
+
+      .nav-toggle {
+        position: absolute;
+        bottom: 10%;
+        right: -1em;
+        padding: 0;
+        background: #000;
+        text-decoration: none;
+        //animation-name: initNavToggleAnim;
+        transform: rotate(180deg);
+        cursor: pointer;
+        // animation: initNavToggleAnim 1s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
+        // animation-delay: 1.5s;
+        &:active,
+        &:focus,
+        &:hover,
+        &:visited {
+          text-decoration: none;
+        }
+      }
+
+      footer {
+        position: absolute;
+        bottom: 1em;
+        width: 100%;
+        margin: 0 auto !important;
+
+        &.row {
+          width: 100%;
+          margin: 0 auto !important;
+        }
+
+        div {
+          width: 100%;
+          margin: 0 auto;
+
+          .social-links {
+            ul {
+              list-style: none;
+
+              li {
+                display: inline-block;
+                margin: 5px 6px;
+                font-size: 18px;
+                font-size: 1.125em;
+                font-style: normal;
+                font-weight: 500;
+                font-stretch: normal;
+                line-height: normal;
+                letter-spacing: normal;
+
+                &:last-child {
+                  margin-right: 0;
+                }
+
+                i {
+                  color: #6f6e6e;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .logo-secondary {
+      position: absolute;
+      top: 0;
+      z-index: 10;
+      padding: 2em 2.5em 0;
+
+      .navbar-brand {
+        padding: 0;
+      }
+
+      img {
+        width: 50px;
+        width: 3.125em;
+      }
+    }
+  }
+
+  body.home {
+    .wrapper {
+      animation-name: initHeaderAnimMain;
+
+      #mainNav,
+      .nav-search,
+      .navbar-collapse,
+      footer {
+        animation-name: initHeaderAnim;
+        //animation-delay:1.5s;
+        transform: translate3d(-1000px,0,0);
+        // animation: initHeaderAnim 1s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
+      }
+
+      .nav-toggle {
+        animation-name: initNavToggleAnim;
+      }
+    }
+  }
+
+  header.animate {
+    .wrapper {
+      animation-name: initHeaderAnimMain;
+
+      #mainNav,
+      .nav-search,
+      .navbar-collapse,
+      footer {
+        animation-name: initHeaderAnim;
+        //animation-delay:1.5s;
+        transform: translate3d(-1000px,0,0);
+        // animation: initHeaderAnim 1s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
+      }
+
+      .nav-toggle {
+        animation-name: initNavToggleAnim;
+      }
+    }
+  }
+
+  header.closeHead {
+    .wrapper {
+      width: 0;
+      padding: 2em 0.6em 0;
+      animation-name: initHeaderAnimMainRev;
+
+      .nav-toggle {
+        animation-name: initNavToggleAnimRev;
+        transform: rotate(0deg);
+      }
+
+      #mainNav,
+      .nav-search,
+      .navbar-collapse,
+      footer {
+        width: 350px;
+        animation-name: initHeaderAnimRev;
+        transform: translate3d(-1000px,0,0);
+        pointer-events: none;
+      }
+    }
+  }
+}
+// Media Queries for Desktop Ends
+///Animations for header
 @keyframes nextNavShow {
   0% {
-    opacity:0;
-    right: 0em;
+    opacity: 0;
+    right: 0;
   }
 
   100% {
@@ -412,9 +592,6 @@ header {
     right: 4.5em;
   }
 }
-
-
-
 @keyframes slideRightHead {
   0% {
     transform: translate3d(-100%,0,0);

@@ -182,12 +182,15 @@ a.navbar-brand {
   position: absolute;
   font-size: 16px;
   font-size: 1em;
-  width: 25px;
-  top: 5px;
-  right: 0;
+  width: 34px;
+  height: 25px;
+  top: 9px;
+  right: 7%;
   padding: 0;
   border: 0;
-  margin: 10px auto;
+  margin: 0 auto;
+  z-index: 999;
+  background: #000;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -208,12 +211,14 @@ a.navbar-brand {
 #nav-icon3 span {
   display: block;
   position: absolute;
-  height: 3px;
-  width: 100%;
-  background: #000000;
+  height: 1px;
+  width: 65%;
+  background: #fff;
   opacity: 1;
   left: 0;
+  right: 0;
   border: 0;
+  margin: 0 auto;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -225,16 +230,16 @@ a.navbar-brand {
 }
 /* Icon 3 */
 #nav-icon3 span:nth-child(1) {
-  top: 0;
+  top: 6px;
 }
 
 #nav-icon3 span:nth-child(2),
 #nav-icon3 span:nth-child(3) {
-  top: 8px;
+  top: 12px;
 }
 
 #nav-icon3 span:nth-child(4) {
-  top: 16px;
+  top: 18px;
 }
 
 #nav-icon3.open span:nth-child(1) {
@@ -276,47 +281,51 @@ a.navbar-brand {
               width: 10px;
             }
 
-            &:hover{
+            &:hover {
               &:before {
                 content: url("../images/testimonials-icon-active.svg");
                 width: 10px;
               }
             }
           }
+
           .portfolio-icon {
             &:before {
               content: url("../images/portfolio-icon.svg");
               width: 10px;
             }
 
-            &:hover{
+            &:hover {
               &:before {
                 content: url("../images/portfolio-icon-active.svg");
                 width: 10px;
               }
             }
           }
+
           .destination-icon {
             &:before {
               content: url("../images/destination-icon.svg");
             }
-            &:hover{
+
+            &:hover {
               &:before {
                 content: url("../images/destination-icon-active.svg");
               }
             }
           }
+
           .transport-icon {
             &:before {
               content: url("../images/transport-icon.svg");
             }
-            &:hover{
+
+            &:hover {
               &:before {
                 content: url("../images/transport-icon-active.svg");
               }
             }
           }
-
 
           a {
             color: #6f6e6e;
@@ -335,6 +344,7 @@ a.navbar-brand {
             .nav-icon-sub {
               display: inline-block;
             }
+
             &:before {
               content: "";
               width: 8px;
@@ -353,11 +363,8 @@ a.navbar-brand {
               .nav-icon-sub-active {
                 display: inline-block;
               }
-
             }
-
           }
-
 
           &.active {
             a {
@@ -390,6 +397,7 @@ a.navbar-brand {
                 content: url("../images/destination-icon-active.svg");
               }
             }
+
             .transport-icon {
               &:before {
                 content: url("../images/transport-icon-active.svg");
@@ -400,6 +408,11 @@ a.navbar-brand {
       }
     }
   }
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>.active>a, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus {
+    color: #249c84;
+    background-color: transparent;
 }
 
 .dropdown-menu {
@@ -422,35 +435,35 @@ a.navbar-brand {
   box-shadow: 0 0 0 rgba(0,0,0,0.175);
 }
 
-
-.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
-    color: #262626;
-    text-decoration: none;
-    background-color: transparent;
-}
-.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
-    color: #555;
-    background-color: transparent;
+.dropdown-menu > li > a:focus,
+.dropdown-menu > li > a:hover {
+  color: #262626;
+  text-decoration: none;
+  background-color: transparent;
 }
 
-
-
-@media screen and (min-width: 320px) and (max-width: 767px) {
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a:hover {
+  color: #555;
+  background-color: transparent;
+}
+@media screen and (min-width: 300px) and (max-width: 767px) {
   #mainNav .navbar-brand > img {
     display: inline-block;
     width: 50px;
     width: 3.125em;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 999px) {
+@media screen and (min-width: 300px) and (max-width: 999px) {
   #mainNav.navbar-default .navbar-nav > li > a {
-    text-align: center;
+    text-align: left;
   }
 
   #mainNav.navbar-default .nav > li.active > a,
   #mainNav.navbar-default .nav > li.active > a:focus {
     position: relative;
-    text-align: center;
+    text-align: left;
   }
 
   header.row {
@@ -459,10 +472,12 @@ a.navbar-brand {
   }
 
   .navbar .navbar-collapse {
-    text-align: center;
-    margin: 3em auto 0;
+    text-align: left;
+    margin: 0 auto;
     border-top: 0;
     width: 100%;
+    height: 100vh;
+    padding: 2em;
   }
 
   .navbar-default .navbar-header .navbar-toggle {
@@ -476,11 +491,11 @@ a.navbar-brand {
   .navbar-toggle {
     position: relative;
     float: none !important;
-    padding: 5px !important;
-    margin-top: 5px !important;
+    padding: 14px !important;
+    margin-top: 0 !important;
     margin-right: 0;
     margin-bottom: 0 !important;
-    background-color: transparent !important;
+    background-color: #000 !important;
     background-image: none;
     border: 0 solid transparent !important;
     border-radius: 0 !important;
@@ -492,13 +507,37 @@ a.navbar-brand {
 
   .navbar .navbar-nav {
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 20px;
     float: none;
   }
 
   #mainNav.navbar-default .navbar-nav > li > a {
     font-size: 1.1em;
-    padding: 20px 0;
+    padding: 10px 0 5px;
+  }
+
+  #mainNav .navbar-brand {
+    height: auto;
+    margin-left: 0;
+    padding: 0;
+    display: block;
+    margin: 0 40px 40px 0;
+  }
+
+  .dropdown > .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu {
+    padding: 0 0 10px;
+  }
+
+  .navbar .navbar-nav li .dropdown-menu li {
+    margin: 2px 0 0;
+  }
+
+  #nav-icon3.open {
+    top: 2em;
   }
 }
 @media (min-width: 768px) {

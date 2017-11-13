@@ -115,6 +115,13 @@ $(function() {
   });
 
 
+  var windowWidth = setWidth();
+  // if(windowWidth < 1000){
+  //   var mainSVG = document.getElementById('mainSVG');
+  //    mainSVG.setAttribute("viewBox", "0 0 336 333");
+  // }
+
+
 
 
 
