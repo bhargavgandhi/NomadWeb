@@ -19,12 +19,14 @@
 	<![endif]-->
 
 	<style>
-		html,
-		body,
-		.container,
-		.main-container,
-		.main-container .row {
-			height: 100%;
+		@media screen and (min-width: 1000px) {
+			html,
+			body,
+			.container,
+			.main-container,
+			.main-container .row {
+				height: 100%;
+			}
 		}
 	</style>
 </head>
@@ -58,7 +60,7 @@
 
 
 							<li class="dropdown">
-								<a href="portfolio.html" class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+								<a href="portfolio.html" class="dropdown-toggle"  href="#" role="button" aria-haspopup="true" aria-expanded="false">
 									PORTFOLIO
 								</a>
 								<ul class="dropdown-menu">
@@ -98,14 +100,9 @@
 							</a>
 								<ul class="dropdown-menu">
 									<li>
-										<a class="destination-icon" href="destination-points.html">
-										DESTINATION POINTS
-									</a>
-									</li>
-									<li>
-										<a class="transport-icon" href="transportation.html">
-										TRANSPORTATION
-									</a>
+									  <a href="neighborhood.html#location-maps">
+									    LOCATION MAPS
+									  </a>
 									</li>
 								</ul>
 							</li>
@@ -117,18 +114,18 @@
 							</li>
 						</ul>
 
-												<footer class="animated2 animation-delay hidden-md hidden-lg">
-													<div>
-														<div class="social-links">
-															<ul>
-																<li><a> <i class="fa fa-facebook"></i> </a></li>
-																<li><a> <i class="fa fa-instagram"></i> </a></li>
-																<li><a> <i class="fa fa-twitter"></i> </a></li>
-																<li><a> <i class="fa fa-linkedin"></i> </a></li>
-															</ul>
-														</div>
-													</div>
-												</footer>
+						<footer class="animated2 animation-delay hidden-md hidden-lg">
+							<div>
+								<div class="social-links">
+									<ul>
+										<li><a> <i class="fa fa-facebook"></i> </a></li>
+										<li><a> <i class="fa fa-instagram"></i> </a></li>
+										<li><a> <i class="fa fa-twitter"></i> </a></li>
+										<li><a> <i class="fa fa-linkedin"></i> </a></li>
+									</ul>
+								</div>
+							</div>
+						</footer>
 					</div>
 				</nav>
 				<div class="nav-search animated2 animation-delay">
@@ -142,18 +139,18 @@
 				<img src="assets/images/menu-toggle.svg" alt="menu toggle image" width="20" />
 			</a>
 
-			<footer class="animated2 animation-delay hidden-xs hidden-sm">
-				<div>
-					<div class="social-links">
-						<ul>
-							<li><a> <i class="fa fa-facebook"></i> </a></li>
-							<li><a> <i class="fa fa-instagram"></i> </a></li>
-							<li><a> <i class="fa fa-twitter"></i> </a></li>
-							<li><a> <i class="fa fa-linkedin"></i> </a></li>
-						</ul>
+				<footer class="animated2 animation-delay hidden-xs hidden-sm">
+					<div>
+						<div class="social-links">
+							<ul>
+								<li><a> <i class="fa fa-facebook"></i> </a></li>
+								<li><a> <i class="fa fa-instagram"></i> </a></li>
+								<li><a> <i class="fa fa-twitter"></i> </a></li>
+								<li><a> <i class="fa fa-linkedin"></i> </a></li>
+							</ul>
+						</div>
 					</div>
-				</div>
-			</footer>
+				</footer>
 			</div>
 
 			<div class="logo-secondary">
@@ -177,28 +174,28 @@
 			<section class="row">
 				<div class="contact-block">
 					<div class="col-xs-12 contact-form-block">
-						<h2 class="green-text">
+						<h2 class="green-text mob-big-text">
 							CONTACT
 						</h2>
-						<div class="col-xs-6 contact-form-inner">
+						<div class="col-xs-12 col-md-6 contact-form-inner">
 							<form id="contact-form-main" action="thanks.php" method="post">
-								<div class="col-xs-12 col-sm-6 marginLess5 form-field">
+								<div class="col-xs-6 col-sm-6 marginLess5 form-field">
 									<div class="slant-input slant-right">
 										<input type="text" name="fname" id="fname" placeholder="First Name" maxlength="50" />
 									</div>
 								</div>
-								<div class="col-xs-12 col-sm-6 form-field">
-									<div class="slant-input slant-left floatRightDesk">
+								<div class="col-xs-6 col-sm-6 form-field">
+									<div class="slant-input slant-left floatRight">
 										<input type="text" name="lname" id="lname" placeholder="Last Name" maxlength="50" />
 									</div>
 								</div>
-								<div class="col-xs-12 col-sm-6 marginLess5 form-field">
+								<div class="col-xs-6 col-sm-6 marginLess5 form-field">
 									<div class="slant-input slant-right-2">
 										<input type="email" name="email" id="email" placeholder="Email" maxlength="100" />
 									</div>
 								</div>
-								<div class="col-xs-12 col-sm-6 form-field">
-									<div class="slant-input slant-left-2 floatRightDesk">
+								<div class="col-xs-6 col-sm-6 form-field">
+									<div class="slant-input slant-left-2 floatRight">
 										<input type="tel" name="phone" id="phone" placeholder="Phone" maxlength="10" />
 									</div>
 								</div>
@@ -210,7 +207,7 @@
 								</div>
 							</form>
 						</div>
-						<div class="col-xs-5 contact-content-block">
+						<div class="col-xs-12 col-md-5 contact-content-block">
 							<p>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
 								in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -229,7 +226,7 @@
 								<a href="tel:212.645.7575"> 212.645.7575 </a>
 							</div>
 
-							<footer class="contact-footer">
+							<footer class="contact-footer hidden-xs hidden-sm">
 								<figure class="merginoff-logo">
 									<img src="assets/images/meringoff-properties-logo.svg" class="img-responsive" />
 								</figure>
@@ -267,6 +264,40 @@
 				</div>
 				<!-- Contact Form Ends -->
 			</section>
+
+			<footer class="contact-footer hidden-md hidden-lg">
+				<figure class="merginoff-logo">
+					<img src="assets/images/meringoff-properties-logo.svg" class="img-responsive" />
+				</figure>
+
+				<figure class="himmel-logo">
+					<img src="assets/images/himmel-meringoff-logo.svg" class="img-responsive" />
+				</figure>
+
+				<figure class="rebny-logo">
+					<img src="assets/images/rebny-logo.svg" class="img-responsive" />
+				</figure>
+
+				<div class="contact-copyrights">
+					<p>
+						© NoMad Portfolio 2017. All Rights Reserved.
+					</p>
+				</div>
+				<div class="contact-footer-links">
+					<ul>
+						<li>
+							<a href="">
+									Privacy
+							</a>
+						</li>
+						<li>
+							<a href="">
+									Legal
+							</a>
+						</li>
+					</ul>
+				</div>
+			</footer>
 		</section>
 		<!-- End MainContainer -->
 	</section>

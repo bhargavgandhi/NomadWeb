@@ -22,7 +22,7 @@
 /* THEME =================================== */
 
 .bx-wrapper .bx-viewport {
-  left: -5px;
+  left: 0px;
   border: 0px solid #fff;
   background: transparent;
   -moz-box-shadow: 0 0 0px #ccc;
@@ -38,10 +38,10 @@
 
 .bx-wrapper .bx-controls-auto, .bx-wrapper .bx-pager {
   position: absolute;
-    right: 4.5%;
-    bottom: -12px;
-    bottom: -5.5%;
-    /*width: 8em;
+  right: 4.5%;
+  bottom: -12px;
+  bottom: -5.5%;
+  /*width: 8em;
     max-width: 75px;*/
 }
 
@@ -62,18 +62,18 @@
 
 .bx-wrapper .bx-pager {
   padding-top: 1.25em;
-    padding-top: 20px;
-    color: #000500;
-    text-align: center;
-    font-family: "TradeGothic-BoldCondTwenty",sans-serif;
-    font-weight: 300;
-    font-size: 11px;
-    font-size: 0.7em;
-    line-height: 1.64;
-    letter-spacing: 1.1px;
-    text-align: center;
-    color: #249c84;
-    -webkit-font-smoothing: antialiased;
+  padding-top: 20px;
+  color: #000500;
+  text-align: center;
+  font-family: "TradeGothic-BoldCondTwenty", sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  font-size: 0.7em;
+  line-height: 1.64;
+  letter-spacing: 1.1px;
+  text-align: center;
+  color: #249c84;
+  -webkit-font-smoothing: antialiased;
 }
 
 .bx-wrapper .bx-controls-auto .bx-controls-auto-item, .bx-wrapper .bx-pager .bx-pager-item {
@@ -101,15 +101,15 @@
 
 .bx-wrapper .bx-prev {
   right: 8%;
-opacity: 0.9;
-background: url(../images/arrow-left.svg) no-repeat;
+  opacity: 0.9;
+  background: url(../images/arrow-left.svg) no-repeat;
 }
 
 .bx-wrapper .bx-next {
   right: 2.5%;
-      opacity: 0.9;
-      background: url('../images/arrow-left.svg') no-repeat;
-      transform: rotate(180deg);
+  opacity: 0.9;
+  background: url('../images/arrow-left.svg') no-repeat;
+  transform: rotate(180deg);
 }
 
 .bx-wrapper .bx-prev:hover {
@@ -122,16 +122,16 @@ background: url(../images/arrow-left.svg) no-repeat;
 
 .bx-wrapper .bx-controls-direction a {
   z-index: 99;
-    position: absolute;
-    bottom: -22px;
-    bottom: -5%;
-    width: 6px;
-    width: 6px;
-    height: 16px;
-    margin-top: 0;
-    outline: 0;
-    text-indent: -9999px;
-    vertical-align: middle;
+  position: absolute;
+  bottom: -22px;
+  bottom: -5%;
+  width: 6px;
+  width: 6px;
+  height: 16px;
+  margin-top: 0;
+  outline: 0;
+  text-indent: -9999px;
+  vertical-align: middle;
 }
 
 .bx-wrapper .bx-controls-direction a.disabled {
@@ -196,4 +196,49 @@ background: url(../images/arrow-left.svg) no-repeat;
   color: #333;
   font-family: inherit;
   font-size: .85em;
+}
+
+@media screen and (min-width: 300px) and (max-width: 999px) {
+  .bx-wrapper .bx-controls-direction a {
+    z-index: 99;
+    position: absolute;
+    bottom: -22px;
+    bottom: -13%;
+    width: 6px;
+    width: 6px;
+    height: 16px;
+    margin-top: 0;
+    outline: 0;
+    text-indent: -9999px;
+    vertical-align: middle;
+  }
+  .bx-wrapper .bx-prev {
+    right: 15%;
+    opacity: 0.9;
+  }
+  .bx-wrapper .bx-next {
+    right: 1.5%;
+    opacity: 0.9;
+    transform: rotate(180deg);
+  }
+  .bx-wrapper .bx-pager {
+    padding-top: 1.25em;
+    padding-top: 0px;
+    color: #000500;
+    text-align: center;
+    font-weight: 300;
+    font-size: 11px;
+    font-size: 0.7em;
+    line-height: 1.64;
+    letter-spacing: 1.1px;
+    text-align: center;
+    color: #249c84;
+    -webkit-font-smoothing: antialiased;
+  }
+  .bx-wrapper .bx-controls-auto, .bx-wrapper .bx-pager {
+    position: absolute;
+    right: 4.5%;
+    bottom: -12px;
+    bottom: -14.5%;
+  }
 }

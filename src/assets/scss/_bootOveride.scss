@@ -410,9 +410,11 @@ a.navbar-brand {
   }
 }
 
-.navbar-default .navbar-nav .open .dropdown-menu>.active>a, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover, .navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus {
-    color: #249c84;
-    background-color: transparent;
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover {
+  color: #249c84;
+  background-color: transparent;
 }
 
 .dropdown-menu {
@@ -451,8 +453,8 @@ a.navbar-brand {
 @media screen and (min-width: 300px) and (max-width: 767px) {
   #mainNav .navbar-brand > img {
     display: inline-block;
-    width: 50px;
-    width: 3.125em;
+    width: 62px;
+    width: 3.88em;
   }
 }
 @media screen and (min-width: 300px) and (max-width: 999px) {

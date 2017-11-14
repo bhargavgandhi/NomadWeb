@@ -99,7 +99,7 @@
   img,
   p {
     display: inline-block;
-    margin:0;
+    margin: 0;
   }
 
   p {
@@ -114,12 +114,12 @@
     width: 12px;
   }
 }
-
 /* Modal Style */
 .modal {
-  .modal-content{
+  .modal-content {
     border-radius: 0;
   }
+
   .modal-body {
     position: relative;
     padding: 0;
@@ -137,13 +137,104 @@
     top: 0;
     opacity: 1;
     width: 1.5em;
-    img{
+
+    img {
       width: 100%;
     }
   }
 }
+
 .modal-dialog {
-    width: 50% !important;
-    max-width: 1000px;
+  width: 50% !important;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+@media screen and (min-width: 300px) and (max-width: 999px) {
+  .news-block {
+    margin: 0 auto;
+
+    h2 {
+      max-width: 6em;
+      margin: 0.9em 0 25px;
+      line-height: 1;
+    }
+  }
+
+  .news-lists {
+    .news-item {
+      a,
+      h3,
+      h4 {
+        font-size: 14px;
+        font-size: 0.875em;
+        font-weight: bold;
+        line-height: 1.5;
+        text-align: left;
+        color: #000000;
+        margin: 10px auto;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .news-title {
+        width: 60%;
+        line-height: 1.5;
+        text-align: left;
+        color: #249c84;
+        margin: 10px 0;
+      }
+
+      .news-date {
+        width: 30%;
+        line-height: 1.5;
+        letter-spacing: -0.2px;
+      }
+
+      .news-link {
+        width: 15%;
+        line-height: 1.5;
+        &:active,
+        &:focus,
+        &:hover,
+        &:visited,
+        span {
+          font-size: 14px;
+          font-size: 0.875em;
+        }
+      }
+    }
+  }
+  //Modal Mobile css
+  .modal {
+    position: fixed;
+    top: auto;
+    top: initial;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+  }
+
+  .modal-dialog {
+    width: 100% !important;
+    max-width: 500px;
     margin: 30px auto;
+  }
+
+  .modal button.close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    float: none;
+    position: absolute;
+    right: 8%;
+    top: -6.2%;
+    opacity: 1;
+    width: 1.25em;
+  }
 }

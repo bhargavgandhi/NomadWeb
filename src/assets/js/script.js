@@ -60,20 +60,6 @@ $(function() {
     event.preventDefault();
   });
 
-  $('.map-lists-row .map-lists').css({'opacity': '0.5', 'filter': 'grayscale(100%)', '-webkit-filter': 'grayscale(100%)'})
-  $('.map-all-lists').css({'opacity': '1', 'filter': 'grayscale(0%)', '-webkit-filter': 'grayscale(0%)'})
-
-  $('.map-lists .map-btns').click(function() {
-    var thisTarget = $(this).data('target-image'),
-      thisTargetImg = "." + thisTarget + "-image";
-
-    $('.map-lists').css({'opacity': '0.5', 'filter': 'grayscale(100%)', '-webkit-filter': 'grayscale(100%)'})
-    $(this).parent().css({'opacity': '1', 'filter': 'grayscale(0%)', '-webkit-filter': 'grayscale(0%)'})
-
-    $('.map-images').css({'opacity': 0});
-    $(thisTargetImg).css({'opacity': 1});
-  })
-
 
   //Search icon events
   $('.search-close-icon').click(function(){
@@ -112,6 +98,9 @@ $(function() {
 
     $('.location-map-list').addClass("hide-list");
     $("."+mapTarget+"-list").removeClass("hide-list");
+
+    $('.btn-maps').removeClass("active-btn");
+    $(this).addClass("active-btn");
   });
 
 
@@ -120,6 +109,40 @@ $(function() {
   //   var mainSVG = document.getElementById('mainSVG');
   //    mainSVG.setAttribute("viewBox", "0 0 336 333");
   // }
+
+  if(windowWidth > 999){
+    $('.map-lists-row .map-lists').css({'opacity': '0.5', 'filter': 'grayscale(100%)', '-webkit-filter': 'grayscale(100%)'})
+    $('.map-all-lists').css({'opacity': '1', 'filter': 'grayscale(0%)', '-webkit-filter': 'grayscale(0%)'})
+
+    $('.map-lists .map-btns').click(function() {
+      var thisTarget = $(this).data('target-image'),
+        thisTargetImg = "." + thisTarget + "-image";
+
+      $('.map-lists').css({'opacity': '0.5', 'filter': 'grayscale(100%)', '-webkit-filter': 'grayscale(100%)'})
+      $(this).parent().css({'opacity': '1', 'filter': 'grayscale(0%)', '-webkit-filter': 'grayscale(0%)'})
+
+      $('.map-images').css({'opacity': 0});
+      $(thisTargetImg).css({'opacity': 1});
+    })
+  }else{
+    $('.map-lists .map-btns').click(function() {
+      var thisTarget = $(this).data('target-image'),
+        thisTargetImg = "." + thisTarget + "-image";
+      $('.map-images').css({'opacity': 0});
+      $(thisTargetImg).css({'opacity': 1});
+    })
+
+      $('.map-lists ol').slideUp();
+      $('.map-lists').click(function(){
+        $('.map-lists ol').slideUp();
+        $('.map-lists').removeClass('active');
+
+        if($(this).find("ol").is(":hidden")){
+          $(this).find("ol").slideToggle();
+          $(this).toggleClass('active');
+        }
+      })
+  }
 
 
 
