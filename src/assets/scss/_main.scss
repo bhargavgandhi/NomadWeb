@@ -130,6 +130,7 @@ blockquote {
 .main-block {
   width: 90%;
   margin: 0 auto;
+  text-align: center;
   height: 100vh;
 
   h2 {
@@ -415,6 +416,11 @@ blockquote {
   body.homeMain {
     .main-container {
       margin: 2em auto;
+    }
+    .main-block {
+      h2 {
+        margin: 20px 0;
+      }
     }
   }
 
