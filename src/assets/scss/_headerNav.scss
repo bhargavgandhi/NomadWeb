@@ -128,7 +128,7 @@ header {
 }
 //Media Query for mobile / tablet
 @media screen and (min-width: 300px) and (max-width: 999px) {
-  .next-nav-main {
+  .next-nav-main, .prev-nav-main {
     display: none;
   }
 
@@ -188,10 +188,10 @@ header {
         input {
           width: 118px;
           width: 10em;
-          height: 20px;
+          height: 25px;
           background: #222221;
           border: 0;
-          padding: 5px;
+          padding: 0 5px;
           margin: 0;
           border-radius: 0 !important;
           outline: none;
@@ -221,7 +221,7 @@ header {
         background: #000;
         text-decoration: none;
         //animation-name: initNavToggleAnim;
-        transform: rotate(180deg);
+        transform: rotate(0deg);
         cursor: pointer;
         // animation: initNavToggleAnim 1s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
         // animation-delay: 1.5s;
@@ -305,16 +305,22 @@ header {
 }
 //Media Query for Desktop Starts
 @media screen and (min-width: 1000px) {
-  .next-nav-main {
+  .next-nav-main, .prev-nav-main {
     position: fixed;
-    right: 4.5em;
     top: 2em;
     opacity: 0;
     animation-duration: 1s;
     animation-fill-mode: both;
     animation-timing-function: cubic-bezier(0.74, 0.09, 0.14, 1.04);
-    animation-name: nextNavShow;
     animation-delay: 2.5s;
+  }
+  .next-nav-main {
+    right: 4.5em;
+    animation-name: nextNavShow;
+  }
+  .prev-nav-main {
+    left: 18.5em;
+    animation-name: prevNavShow;
   }
 
   .scroll-navs {
@@ -411,10 +417,10 @@ header {
         input {
           width: 118px;
           width: 10em;
-          height: 20px;
+          height: 30px;
           background: #222221;
           border: 0;
-          padding: 5px;
+          padding: 0 5px;
           margin: 0;
           border-radius: 0 !important;
           outline: none;
@@ -443,7 +449,7 @@ header {
         background: #000;
         text-decoration: none;
         //animation-name: initNavToggleAnim;
-        transform: rotate(180deg);
+        transform: rotate(0deg);
         cursor: pointer;
         // animation: initNavToggleAnim 1s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
         // animation-delay: 1.5s;
@@ -564,7 +570,7 @@ header {
 
       .nav-toggle {
         animation-name: initNavToggleAnimRev;
-        transform: rotate(0deg);
+        transform: rotate(180deg);
       }
 
       #mainNav,
@@ -590,6 +596,17 @@ header {
   100% {
     opacity: 1;
     right: 4.5em;
+  }
+}
+@keyframes prevNavShow {
+  0% {
+    opacity: 0;
+    left: 0;
+  }
+
+  100% {
+    opacity: 1;
+    left: 18.5em;
   }
 }
 @keyframes slideRightHead {

@@ -1,0 +1,213 @@
+/* ===========================
+     Author: Bhargav Gandhi (BG)
+     Description: news.scss
+     =========================== */
+.availabilities-block {
+  margin: 0 auto;
+
+  h2 {
+    max-width: 5em;
+    margin: 1.25em 0 25px;
+    line-height: 1;
+  }
+}
+
+.avail-lists {
+  .avail-item {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid #000;
+
+    &:last-child {
+      border-bottom: 1px solid #000;
+    }
+
+    a,
+    h3,
+    h4 {
+      font-size: 16px;
+      font-size: 1em;
+      font-weight: bold;
+      line-height: 2.2;
+      text-align: left;
+      color: #000000;
+      margin: 10px auto;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .avail-title {
+      width: 30%;
+      font-weight: bold;
+      line-height: 2.5;
+      text-align: left;
+      color: #249c84;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .avail-details {
+      width: 40%;
+      font-family: $archivoNarrow;
+      line-height: 2.5;
+      font-weight: normal;
+      letter-spacing: -0.2px;
+      text-align: center;
+      color: #6f6e6e;
+    }
+
+    .avail-link {
+      width: 30%;
+      font-family: $archivoNarrow;
+      line-height: 2.5;
+      font-weight: normal;
+      letter-spacing: -0.2px;
+      text-align: right;
+      text-decoration: none;
+      color: #000000;
+
+      span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      img {
+        width: 20px;
+        display: inline-block;
+        transform: rotate(270deg);
+        vertical-align: middle;
+        margin: 0 5% 0 20%;
+      }
+
+      &:active,
+      &:focus,
+      &:hover,
+      &:visited,
+      span {
+        text-decoration: none;
+        font-size: 16px;
+        font-size: 1em;
+        font-family: $archivoNarrow;
+        text-align: right;
+        color: #000000;
+      }
+    }
+  }
+}
+
+.avail-sorting {
+  margin: 1em 0;
+
+  img,
+  p {
+    display: inline-block;
+    margin: 0;
+  }
+
+  p {
+    font-family: $archivoNarrow;
+    font-size: 11px;
+    line-height: normal;
+    text-align: left;
+    color: #6f6e6e;
+  }
+
+  img {
+    width: 12px;
+  }
+}
+
+.avail-details{
+  h3{
+      border-bottom: 1px solid #000;
+      text-transform: uppercase;
+  }
+
+  .btn-download{
+    margin: 10% 25px 0 auto
+  }
+}
+.avail-detail-items {
+  border-bottom: 1px solid #000;
+
+  h4 {
+    font-family: $archivoNarrow;
+    font-size: 15px;
+    font-size: 0.94em;
+    font-weight: bold;
+    line-height: 1.6;
+    text-align: left;
+    letter-spacing: -0.2px;
+    color: #000000;
+    -webkit-font-smoothing: antialiased;
+  }
+  h4.green-text{
+    font-family: $fontStack;
+    color: #249c84;
+    text-transform: uppercase;
+  }
+
+  &.transBorder {
+    border-bottom: 1px solid transparent;
+  }
+  &.textAlignRight{
+    h4,a{
+      text-align: right;
+    }
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 999px) {
+  .availabilities-block {
+    margin: 0 auto;
+
+    h2 {
+      max-width: 6em;
+      margin: 0.9em 0 25px;
+      line-height: 1;
+    }
+  }
+
+  .avail-lists {
+    .avail-item {
+      a,
+      h3,
+      h4 {
+        font-size: 14px;
+        font-size: 0.875em;
+        font-weight: bold;
+        line-height: 1.5;
+        text-align: left;
+        color: #000000;
+        margin: 10px auto;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .avail-title {
+        width: 35%;
+        line-height: 1.5;
+        text-align: left;
+        color: #249c84;
+        margin: 10px 0;
+      }
+
+      .avail-details {
+        width: 50%;
+        line-height: 1.5;
+        letter-spacing: -0.2px;
+      }
+
+      .avail-link {
+        width: 15%;
+        line-height: 1.5;
+
+        &:active,
+        &:focus,
+        &:hover,
+        &:visited,
+        span {
+          font-size: 14px;
+          font-size: 0.875em;
+        }
+      }
+    }
+  }
+}
