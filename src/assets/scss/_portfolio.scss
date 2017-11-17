@@ -74,6 +74,7 @@
   margin: 8% auto;
 
   h2 {
+    width: 80%;
     font-size: 83px;
     font-weight: bold;
     line-height: 1;
@@ -202,6 +203,23 @@
         font-size: 0.75em;
         line-height: 1.75;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 1400px){
+  .portfolio-nav {
+
+    h2 {
+      width: 75%
+    }
+  }
+}
+@media screen and (min-width: 1600px){
+  .portfolio-nav {
+
+    h2 {
+      width: 65%
     }
   }
 }

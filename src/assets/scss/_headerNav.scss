@@ -16,6 +16,10 @@ header {
   animation-delay: 1.5s;
 }
 
+.animation-delay2 {
+  animation-delay: 3s;
+}
+
 .slideRightHeading {
   animation: slideRightHead 1s both;
 }
@@ -128,8 +132,25 @@ header {
 }
 //Media Query for mobile / tablet
 @media screen and (min-width: 300px) and (max-width: 999px) {
-  .next-nav-main, .prev-nav-main {
+  .next-nav-main,
+  .prev-nav-main {
     display: none;
+  }
+
+  .logo-secondary {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    padding: 2em 1.5em;
+
+    .navbar-brand {
+      padding: 0;
+    }
+
+    img {
+      width: 62px;
+      width: 3.88em;
+    }
   }
 
   header {
@@ -285,27 +306,12 @@ header {
         min-height: 0;
       }
     }
-
-    .logo-secondary {
-      position: absolute;
-      top: 0;
-      z-index: 10;
-      padding: 2em 1.5em;
-
-      .navbar-brand {
-        padding: 0;
-      }
-
-      img {
-        width: 62px;
-        width: 3.88em;
-      }
-    }
   }
 }
 //Media Query for Desktop Starts
 @media screen and (min-width: 1000px) {
-  .next-nav-main, .prev-nav-main {
+  .next-nav-main,
+  .prev-nav-main {
     position: fixed;
     top: 2em;
     opacity: 0;
@@ -314,13 +320,24 @@ header {
     animation-timing-function: cubic-bezier(0.74, 0.09, 0.14, 1.04);
     animation-delay: 2.5s;
   }
+
   .next-nav-main {
     right: 4.5em;
     animation-name: nextNavShow;
   }
+
   .prev-nav-main {
-    left: 18.5em;
+    left: 20%;
     animation-name: prevNavShow;
+  }
+
+  .prev-nav-main{
+    transition: left 0.7s ease-in-out;
+  }
+  header.closeHead ~ .prev-nav-main {
+    left: 10% !important;
+    opacity: 1;
+    transition: left 0.7s ease-in-out;
   }
 
   .scroll-navs {
@@ -343,6 +360,22 @@ header {
       filter: grayscale(100%);
       -webkit-filter: grayscale(100%);
       -ms-filter: grayscale(100%);
+    }
+  }
+
+  .logo-secondary {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    padding: 2em 2.5em 0;
+
+    .navbar-brand {
+      padding: 0;
+    }
+
+    img {
+      width: 50px;
+      width: 3.125em;
     }
   }
 
@@ -504,22 +537,6 @@ header {
         }
       }
     }
-
-    .logo-secondary {
-      position: absolute;
-      top: 0;
-      z-index: 10;
-      padding: 2em 2.5em 0;
-
-      .navbar-brand {
-        padding: 0;
-      }
-
-      img {
-        width: 50px;
-        width: 3.125em;
-      }
-    }
   }
 
   body.home {
@@ -563,6 +580,9 @@ header {
   }
 
   header.closeHead {
+    width: 3%;
+    transition: width 1s ease-in-out;
+
     .wrapper {
       width: 0;
       padding: 2em 0.6em 0;
@@ -585,28 +605,51 @@ header {
     }
   }
 }
+
+.main-container {
+  transition: width, margin 0.7s ease-in-out;
+}
+
+header.closeHead ~ .main-container {
+  width: 100%;
+  margin: 0;
+  display: block;
+}
+body.portfolio, body.availabilities, body.availabilities-details, body.news, body.contact{
+  header.closeHead ~ .main-container {
+    width: 85%;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
 // Media Queries for Desktop Ends
 ///Animations for header
 @keyframes nextNavShow {
   0% {
     opacity: 0;
-    right: 0;
   }
 
   100% {
     opacity: 1;
-    right: 4.5em;
   }
 }
 @keyframes prevNavShow {
   0% {
     opacity: 0;
-    left: 0;
   }
 
   100% {
     opacity: 1;
-    left: 18.5em;
+  }
+}
+@keyframes prevNavShowClosed {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 @keyframes slideRightHead {

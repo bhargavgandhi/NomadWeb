@@ -37,7 +37,7 @@ $(function() {
 
     $('.navbar-collapse').toggleClass('slideRightHeading');
 
-    $('header .wrapper, .navbar-collapse, #mainNav, footer, .nav-toggle, .nav-search').removeClass('animation-delay');
+    $('header .wrapper, .navbar-collapse, #mainNav, footer, .nav-toggle, .nav-search').removeClass('animation-delay2');
   });
 
   $('a[href^="#"]').click(function (event) {
