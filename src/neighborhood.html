@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="neighborhood">
 
 <head>
 	<meta charset="utf-8">
@@ -10,6 +10,8 @@
 	<title>Nomad - Neighborhood</title>
 	<meta name="author" content="Bhargav Gandhi">
 
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.4/slick.min.css" />
 	<link rel="stylesheet" href="assets/css/slider.css" />
 	<link rel="stylesheet" href="assets/css/style.css" />
 
@@ -232,14 +234,14 @@
 
 				<div class="main-block hidden-md hidden-lg">
 					<div class="neighborhood-slides">
-						<div>
-							<img src="assets/images/mobile/neighbor-gallery-1@2x-mob.png" width="100%" />
+						<div class="fix-width">
+							<img src="assets/images/mobile/neighbor-gallery-1@2x-mob.png" />
 						</div>
-						<div>
-							<img src="assets/images/mobile/neighbor-gallery-2@2x-mob.png" width="100%" />
+						<div class="auto-width neigh-slide">
+							<img src="assets/images/mobile/neighbor-gallery-2@2x-mob.png" />
 						</div>
-						<div>
-							<img src="assets/images/mobile/neighbor-gallery-3@2x-mob.png" width="100%" />
+						<div class="fix-width neigh-slide">
+							<img src="assets/images/mobile/neighbor-gallery-3@2x-mob.png" />
 						</div>
 					</div>
 
@@ -615,18 +617,35 @@
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
 	</script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.4/slick.min.js"></script>
 	<script src="assets/js/vendor/slider.min.js"></script>
+
+	<!-- <script>
+		$(document).ready(function() {
+			$('.variable-width').slick({
+				variableWidth: true,
+				slidesToShow: 1,
+				infinite: false,
+				slidesToScroll: 1,
+				speed: 1000,
+				centerMode: false,
+				adaptiveHeight: true,
+				cssEase: 'ease',
+
+			});
+		});
+	</script> -->
 	<script>
 		var windowWidth = setWidth();
 		if (windowWidth < 1000) {
 			$('.neighborhood-slides').bxSlider({
-				slideWidth: '200%',
+				slideWidth: '350%',
 				minSlides: 2,
 				maxSlides: 2,
 				moveSlides: 1,
 				slideMargin: 0,
 				infiniteLoop: false,
-				adaptiveHeight: true,
 				mode: 'horizontal',
 				captions: true,
 				pager: true,

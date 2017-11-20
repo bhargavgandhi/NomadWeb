@@ -33,11 +33,6 @@
   display: none;
 }
 
-
-header.closeHead ~ .main-container #location-maps {
-  width: 90%;
-}
-
 #location-maps {
   margin: 5% auto;
 }
@@ -50,7 +45,9 @@ header.closeHead ~ .main-container #location-maps {
     font-size: 0.7em;
     opacity: 0.6;
 
-    &:hover, &:focus, &.active-btn {
+    &.active-btn,
+    &:focus,
+    &:hover {
       color: #249c84;
       opacity: 1;
     }
@@ -68,7 +65,8 @@ header.closeHead ~ .main-container #location-maps {
       line-height: 12px;
     }
 
-    &.active-btn, &:hover {
+    &.active-btn,
+    &:hover {
       &:before {
         content: url("../images/destination-icon-active.svg");
       }
@@ -87,7 +85,8 @@ header.closeHead ~ .main-container #location-maps {
       line-height: 12px;
     }
 
-    &.active-btn, &:hover {
+    &.active-btn,
+    &:hover {
       &:before {
         content: url("../images/transport-icon-active.svg");
       }
@@ -198,10 +197,55 @@ header.closeHead ~ .main-container #location-maps {
     cursor: pointer;
   }
 }
+
+.neighborhood-slides > div,
+.slick-slide {
+  height: 150px;
+}
+
+.neighborhood-slides > div.fix-width {
+  height: 150px;
+  height: 36vh;
+  height: 40vw;
+  width: 150px !important;
+  width: 36vh !important;
+  width: 40vw !important;
+}
+
+.neighborhood-slides > div.auto-width {
+  height: 150px;
+  height: 36vh;
+  height: 40vw;
+  width: auto !important;
+}
+
+.neigh-slide {
+  margin-left: -50px;
+}
+
+.bx-wrapper img {
+  height: 100%;
+}
+
+.variable-width img {
+  padding: 0 1px;
+}
+
+.slick-track {
+  width: 150% !important;
+}
+
+.slick-slide {
+  margin-left: -50px;
+}
 @media screen and (min-width: 300px) and (max-width: 999px) {
   body.neighborhood {
     .main-block {
-      margin: 2em auto 0;
+      margin: 4em auto 0;
+
+      h2 {
+        margin: 1em 0 10px;
+      }
     }
   }
 
@@ -220,6 +264,10 @@ header.closeHead ~ .main-container #location-maps {
 
   .map-block {
     margin: 0.5em 1em 2.5em 0;
+
+    svg {
+      width: 100%;
+    }
   }
 
   #location-maps {
@@ -395,5 +443,20 @@ header.closeHead ~ .main-container #location-maps {
 
   .mob-big-text.transportation-list {
     padding: 0;
+  }
+}
+/* Desktop Styles for Neighborhood page */
+@media screen and (min-width: 1000px) {
+  html.neighborhood {
+    height: 100%;
+
+    body {
+      height: 100%;
+      overflow: hidden;
+    }
+  }
+
+  header.closeHead ~ .main-container #location-maps {
+    width: 90%;
   }
 }

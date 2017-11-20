@@ -604,24 +604,26 @@ header {
       }
     }
   }
+
+  header.closeHead ~ .main-container {
+    width: 100%;
+    margin: 0;
+    display: block;
+  }
+  body.portfolio, body.availabilities, body.availabilities-details, body.news, body.contact{
+    header.closeHead ~ .main-container {
+      width: 85%;
+      margin: 0 auto;
+      display: block;
+    }
+  }
 }
 
 .main-container {
   transition: width, margin 0.7s ease-in-out;
 }
 
-header.closeHead ~ .main-container {
-  width: 100%;
-  margin: 0;
-  display: block;
-}
-body.portfolio, body.availabilities, body.availabilities-details, body.news, body.contact{
-  header.closeHead ~ .main-container {
-    width: 85%;
-    margin: 0 auto;
-    display: block;
-  }
-}
+
 
 // Media Queries for Desktop Ends
 ///Animations for header
