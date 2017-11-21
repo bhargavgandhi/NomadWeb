@@ -34,6 +34,28 @@
     margin-bottom:0 !important;
   }
 
+  #introVideoHome {
+    h1 {
+      position: absolute;
+      text-transform: uppercase;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 120px;
+      z-index: 99999;
+      text-align: center;
+      font-size: 16px;
+
+      #skipIntro1 {
+        background: transparent;
+        font-size: 14px;
+        font-size: 0.875em;
+        text-transform: uppercase;
+      }
+    }
+  }
+
 }
 
 

@@ -27,6 +27,11 @@ $(function() {
   $("body").addClass("Hide");
   $("#preloader").removeClass("Hide");
 
+  if ($('body').hasClass('home')) {
+    homePageAnimation();
+    $("body").removeClass("fadeIn");
+  }
+
   $("#nav-icon3").click(function() {
     $("#nav-icon3").toggleClass("open");
   });

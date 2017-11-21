@@ -5,6 +5,38 @@
 //set the grid gap
 $gridgap: 7.5%;
 
+#introVideoHome{
+  h1{
+    position: absolute;
+    text-transform: uppercase;
+    bottom:10px;
+    left:0;
+    right:0;
+    margin:0 auto;
+    width: 150px;
+    z-index: 99999;
+    font-size: 16px;
+    text-align: center;
+
+    #skipIntro1{
+      color: #fff;
+      background: transparent;
+      font-size: 20px;
+      font-size: 1.2em;
+      text-transform: uppercase;
+    }
+  }
+
+}
+
+body.black{
+  background: #000;
+}
+
+.hidden{
+  display: none;
+}
+
 .center-inner {
   width: 100%;
   height: auto;
@@ -214,25 +246,25 @@ blockquote {
       .left-blocks {
         transform: translate3d(-1000px, 0, 0);
         animation: leftBlocks 2.25s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
-        animation-delay: 0.7s;
+        //animation-delay: 0.7s;
       }
 
       .left-blocks2 {
         transform: translate3d(-1250px, 0, 0);
         animation: leftBlocks2 2.3s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
-        animation-delay: 0.72s;
+        animation-delay: 0.02s;
       }
 
       .right-blocks {
         transform: translate3d(1000px, 0, 0);
         animation: rightBlocks 2.25s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
-        animation-delay: 0.7s;
+        //animation-delay: 0.7s;
       }
 
       .right-blocks2 {
         transform: translate3d(1250px, 0, 0);
         animation: rightBlocks2 2.3s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
-        animation-delay: 0.72s;
+        animation-delay: 0.02s;
       }
 
       .left-heading {
@@ -488,25 +520,25 @@ blockquote {
         .left-blocks {
           transform: translate3d(-1000px, 0, 0);
           animation: leftBlocks 2.25s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
-          animation-delay: 0.7s;
+          //animation-delay: 0.7s;
         }
 
         .left-blocks2 {
           transform: translate3d(-1250px, 0, 0);
           animation: leftBlocks2 2.3s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
-          animation-delay: 0.72s;
+          animation-delay: 0.02s;
         }
 
         .right-blocks {
           transform: translate3d(1000px, 0, 0);
           animation: rightBlocks 2.25s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
-          animation-delay: 0.7s;
+          //animation-delay: 0.7s;
         }
 
         .right-blocks2 {
           transform: translate3d(1250px, 0, 0);
           animation: rightBlocks2 2.3s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
-          animation-delay: 0.72s;
+          animation-delay: 0.02s;
         }
 
         .left-heading {
