@@ -134,6 +134,7 @@
     letter-spacing: -0.3px;
     text-align: center;
     color: #6f6e6e;
+    width: 45%;
   }
 
   .avail-detail-row {
@@ -195,6 +196,12 @@
   }
 }
 
+.avail-contact-info, .available-space{
+  .avail-detail-item {
+    border-bottom: 1px solid #000;
+  }
+}
+
 .avail-detail-items {
   h4 {
     font-family: $archivoNarrow;
@@ -218,8 +225,16 @@
       text-align: center;
     }
 
+    &.no-margin-bottom{
+      margin-bottom:0;
+    }
+    &.no-margin-top{
+      margin-top:0;
+    }
+
     a {
       font-family: $archivoNarrow;
+      color: #000000;
     }
   }
 

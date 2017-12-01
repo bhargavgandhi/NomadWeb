@@ -42,7 +42,14 @@ $(function() {
 
     $('.navbar-collapse').toggleClass('slideRightHeading');
 
-    $('header .wrapper, .navbar-collapse, #mainNav, footer, .nav-toggle, .nav-search').removeClass('animation-delay2');
+    $('header .wrapper, .navbar-collapse, #mainNav, footer, .nav-toggle').removeClass('animation-delay2');
+
+    if ($('body').hasClass('portfolio')){
+      portfolioSlider.reloadSlider();
+    }
+    if ($('body').hasClass('availabilities-details')){
+      availabilitiesSlider.reloadSlider();
+    }
   });
 
   $('a[href^="#"]').click(function (event) {
@@ -148,6 +155,31 @@ $(function() {
         }
       })
   }
+
+
+if ($('body').hasClass('portfolio')){
+
+  portfolioSlider = $('.portfolio-slides').bxSlider({
+			adaptiveHeight: true,
+			mode: 'horizontal',
+			captions: true,
+			pager: true,
+			pagerType: 'short'
+		});
+}
+
+if ($('body').hasClass('availabilities-details')){
+
+  availabilitiesSlider = $('.availabilities-slides').bxSlider({
+			adaptiveHeight: true,
+			mode: 'horizontal',
+			captions: true,
+			pager: true,
+			pagerType: 'short'
+		});
+}
+
+
 
 
 

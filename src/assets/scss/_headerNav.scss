@@ -176,6 +176,7 @@ header {
       footer {}
 
       .nav-search {
+
         position: absolute;
         bottom: 11%;
         left: 2em;
@@ -367,7 +368,7 @@ header {
     position: absolute;
     top: 0;
     z-index: 10;
-    padding: 2em 2.5em 0;
+    padding: 2em 0 0 2.5em;
 
     .navbar-brand {
       padding: 0;
@@ -421,6 +422,7 @@ header {
         position: absolute;
         bottom: 11%;
         left: 2em;
+        display: none;
 
         img,
         input {
@@ -564,7 +566,6 @@ header {
       animation-name: initHeaderAnimMain;
 
       #mainNav,
-      .nav-search,
       .navbar-collapse,
       footer {
         animation-name: initHeaderAnim;
@@ -615,6 +616,18 @@ header {
       width: 85%;
       margin: 0 auto;
       display: block;
+    }
+  }
+}
+
+/* Media Queries Desktop 1000px Ends */
+
+/* Media Queries 1200px X 690px */
+
+@media screen and (min-width: 1200px) and (max-height: 700px) {
+  body.portfolio, body.availabilities, body.availabilities-details, body.news, body.contact{
+    header.closeHead ~ .main-container {
+      width: 78%;
     }
   }
 }
