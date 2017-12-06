@@ -30,15 +30,19 @@ $(function() {
   if ($('body').hasClass('home')) {
     homePageAnimation();
     $("body").removeClass("fadeIn");
+    $('header').removeClass('animate');
+  }else{
+    $('header').addClass('animate');
   }
 
   $("#nav-icon3").click(function() {
     $("#nav-icon3").toggleClass("open");
   });
 
-  $('.nav-toggle').click(function() {
+
+
+  $('.nav-toggle, .nav-toggle img, header').click(function() {
     $('header').toggleClass('closeHead');
-    $('header').addClass('animate');
 
     $('.navbar-collapse').toggleClass('slideRightHeading');
 
@@ -51,6 +55,7 @@ $(function() {
       availabilitiesSlider.reloadSlider();
     }
   });
+
 
   $('a[href^="#"]').click(function (event) {
     // The id of the section we want to go to.

@@ -328,7 +328,7 @@ header {
   }
 
   .prev-nav-main {
-    left: 20%;
+    right: 6em;
     animation-name: prevNavShow;
   }
 
@@ -336,7 +336,6 @@ header {
     transition: left 0.7s ease-in-out;
   }
   header.closeHead ~ .prev-nav-main {
-    left: 10% !important;
     opacity: 1;
     transition: left 0.7s ease-in-out;
   }
@@ -542,21 +541,48 @@ header {
   }
 
   body.home {
-    .wrapper {
-      animation-name: initHeaderAnimMain;
+    // .wrapper {
+    //   animation-name: initHeaderAnimMain;
+    //
+    //   #mainNav,
+    //   .nav-search,
+    //   .navbar-collapse,
+    //   footer {
+    //     animation-name: initHeaderAnim;
+    //     //animation-delay:1.5s;
+    //     transform: translate3d(-1000px,0,0);
+    //     // animation: initHeaderAnim 1s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
+    //   }
+    //
+    //   .nav-toggle {
+    //     animation-name: initNavToggleAnim;
+    //   }
+    // }
 
-      #mainNav,
-      .nav-search,
-      .navbar-collapse,
-      footer {
-        animation-name: initHeaderAnim;
-        //animation-delay:1.5s;
-        transform: translate3d(-1000px,0,0);
-        // animation: initHeaderAnim 1s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
-      }
+    .main-container {
+        margin: 0px auto 0 18%;
+    }
+    header.closeHead {
+      width: 3%;
+      transition: width 1s ease-in-out;
+      cursor: pointer;
 
-      .nav-toggle {
-        animation-name: initNavToggleAnim;
+      .wrapper {
+        width: 0;
+        padding: 2em 0.6em 0;
+
+        .nav-toggle {
+          transform: rotate(180deg);
+        }
+
+        #mainNav,
+        .nav-search,
+        .navbar-collapse,
+        footer {
+          width: 350px;
+          transform: translate3d(-1000px,0,0);
+          pointer-events: none;
+        }
       }
     }
   }
@@ -580,9 +606,10 @@ header {
     }
   }
 
-  header.closeHead {
+  header.closeHead.animate {
     width: 3%;
     transition: width 1s ease-in-out;
+    cursor: pointer;
 
     .wrapper {
       width: 0;
@@ -616,6 +643,14 @@ header {
       width: 85%;
       margin: 0 auto;
       display: block;
+    }
+  }
+  body.portfolio-main{
+    header ~ .main-container {
+      margin: 0 auto 0 18%;
+    }
+    header.closeHead ~ .main-container {
+      margin: 0;
     }
   }
 }

@@ -87,6 +87,12 @@ function homePageAnimation() {
       $('body').removeClass('black');
     }, 1000);
 
+    if ($('body').hasClass('home')) {
+      setTimeout(function(){
+        $('header').removeClass('closeHead');
+      }, 4000);
+    }
+
   });
 
   setTimeout(function() {
@@ -115,6 +121,12 @@ function homePageAnimation() {
         $('body').removeClass('black');
 
       }, 3000);
+
+      if ($('body').hasClass('home')) {
+        setTimeout(function(){
+          $('header').removeClass('closeHead');
+        }, 6000);
+      }
 
     }
   }, 1000);

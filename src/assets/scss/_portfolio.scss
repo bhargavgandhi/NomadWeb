@@ -69,13 +69,18 @@
       width: 60px;
     }
   }
+
+  .btn-download{
+    width: 25%;
+    color: #6f6e6e;
+  }
 }
 
 .portfolio-nav {
   margin: 8% auto;
 
   h2 {
-    width: 80%;
+    width: 75%;
     font-size: 83px;
     font-size: 4.5em;
     font-weight: bold;
@@ -121,7 +126,7 @@
       position: absolute;
       right: 10%;
       top: 0;
-      border-bottom: 93px solid #fff;
+      border-bottom: 100px solid #fff;
       border-right: 75px solid #fff;
       border-color: transparent #fff transparent transparent;
     }
