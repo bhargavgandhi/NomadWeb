@@ -10,7 +10,6 @@ $(window).scroll(function() {
     if (wScroll > $('#main').offset().top - ($(window).height() / 1.4)) {
       count1++;
       if (count1 === 1) {
-        console.log('Maps');
         $('body.neighborhood .left-blocks, body.neighborhood .left-blocks2, body.neighborhood .right-blocks, body.neighborhood .right-blocks2').css({
           'animation-play-state' : 'running'
         })

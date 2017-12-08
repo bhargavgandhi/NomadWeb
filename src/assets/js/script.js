@@ -3,6 +3,7 @@
    Description: script.js
    =========================== */
 
+
 $(function() {
   checkBrowsers();
   var itsIE = detectIE();
@@ -28,10 +29,29 @@ $(function() {
   $("#preloader").removeClass("Hide");
 
   if ($('body').hasClass('home')) {
-    homePageAnimation();
+    var windowWidth = setWidth();
+
+      // Check browser support
+      if (typeof(Storage) !== "undefined") {
+        var firstVisit = localStorage.getItem("firstvisit");
+        if (firstVisit != "yes") {
+          homePageAnimation();
+          // Store
+          localStorage.setItem("firstvisit", "yes");
+        } else {
+          //endVideo();
+          homePageAnimation();
+        }
+
+      } else {
+        console.log("Sorry, your browser does not support Web Storage...");
+        homePageAnimation();
+      }
+
+
     $("body").removeClass("fadeIn");
     $('header').removeClass('animate');
-  }else{
+  } else {
     $('header').addClass('animate');
   }
 
@@ -48,16 +68,23 @@ $(function() {
 
     $('header .wrapper, .navbar-collapse, #mainNav, footer, .nav-toggle').removeClass('animation-delay2');
 
-    if ($('body').hasClass('portfolio')){
+    if ($('body').hasClass('portfolio')) {
       portfolioSlider.reloadSlider();
     }
-    if ($('body').hasClass('availabilities-details')){
+    if ($('body').hasClass('availabilities-details')) {
       availabilitiesSlider.reloadSlider();
     }
+
+    $('body.home .left-blocks, body.home .left-blocks2, body.home .right-blocks, body.home .right-blocks2').css({
+      'animation-play-state': 'paused',
+      'transform': 'translate3d(0, 0, 0)',
+      '-webkit-transform': 'translate3d(0, 0, 0)',
+      'animation': 'unset'
+    })
   });
 
 
-  $('a[href^="#"]').click(function (event) {
+  $('a[href^="#"]').click(function(event) {
     // The id of the section we want to go to.
     var id = $(this).attr("href");
 
@@ -79,14 +106,14 @@ $(function() {
 
 
   //Search icon events
-  $('.search-close-icon').click(function(){
+  $('.search-close-icon').click(function() {
     $('#search').addClass('hide-search')
   });
-  $('.search-icon').click(function(){
+  $('.search-icon').click(function() {
     $('#search').toggleClass('hide-search')
   });
 
-  $('.scroll-navs a').click(function(){
+  $('.scroll-navs a').click(function() {
     $('.scroll-navs a').removeClass('deactive');
     $(this).toggleClass('deactive');
   });
@@ -95,26 +122,26 @@ $(function() {
 
   //Home Image Mouseover
   var imgTarget;
-  $('.home-image-change').mouseover(function(){
+  $('.home-image-change').mouseover(function() {
     imgTarget = $(this).data('target');
     $('.main-images').addClass("hide-image");
     $('.image-' + imgTarget).addClass("show-image");
 
-  }).mouseout(function(){
+  }).mouseout(function() {
     $('.main-images').removeClass("hide-image");
     $('.image-' + imgTarget).removeClass("show-image");
   });
 
 
-  $('.btn-maps').click(function(){
+  $('.btn-maps').click(function() {
     var mapTarget = $(this).data('target');
     console.log(mapTarget);
     $('.location-maps').removeClass("show-image");
     $('.location-maps').addClass("hide-image");
-    $("."+mapTarget+"-map").removeClass("hide-image").addClass("show-image");
+    $("." + mapTarget + "-map").removeClass("hide-image").addClass("show-image");
 
     $('.location-map-list').addClass("hide-list");
-    $("."+mapTarget+"-list").removeClass("hide-list");
+    $("." + mapTarget + "-list").removeClass("hide-list");
 
     $('.btn-maps').removeClass("active-btn");
     $(this).addClass("active-btn");
@@ -127,62 +154,86 @@ $(function() {
   //    mainSVG.setAttribute("viewBox", "0 0 336 333");
   // }
 
-  if(windowWidth > 999){
-    $('.destination-list .map-lists-row .map-lists').css({'opacity': '0.5', 'filter': 'grayscale(100%)', '-webkit-filter': 'grayscale(100%)'})
-    $('.map-all-lists').css({'opacity': '1', 'filter': 'grayscale(0%)', '-webkit-filter': 'grayscale(0%)'})
+  if (windowWidth > 999) {
+    $('.destination-list .map-lists-row .map-lists').css({
+      'opacity': '0.5',
+      'filter': 'grayscale(100%)',
+      '-webkit-filter': 'grayscale(100%)'
+    })
+    $('.map-all-lists').css({
+      'opacity': '1',
+      'filter': 'grayscale(0%)',
+      '-webkit-filter': 'grayscale(0%)'
+    })
 
     $('.map-lists .map-btns').click(function() {
       var thisTarget = $(this).data('target-image'),
         thisTargetImg = "." + thisTarget + "-image";
 
-      $('.destination-list .map-lists').css({'opacity': '0.5', 'filter': 'grayscale(100%)', '-webkit-filter': 'grayscale(100%)'})
-      $(this).parent().css({'opacity': '1', 'filter': 'grayscale(0%)', '-webkit-filter': 'grayscale(0%)'})
-
-      $('.map-images').css({'opacity': 0});
-      $(thisTargetImg).css({'opacity': 1});
-    })
-  }else{
-    $('.map-lists .map-btns').click(function() {
-      var thisTarget = $(this).data('target-image'),
-        thisTargetImg = "." + thisTarget + "-image";
-      $('.map-images').css({'opacity': 0});
-      $(thisTargetImg).css({'opacity': 1});
-    })
-
-      $('.map-lists ol').slideUp();
-      $('.map-lists').click(function(){
-        $('.map-lists ol').slideUp();
-        $('.map-lists').removeClass('active');
-
-        if($(this).find("ol").is(":hidden")){
-          $(this).find("ol").slideToggle();
-          $(this).toggleClass('active');
-        }
+      $('.destination-list .map-lists').css({
+        'opacity': '0.5',
+        'filter': 'grayscale(100%)',
+        '-webkit-filter': 'grayscale(100%)'
       })
+      $(this).parent().css({
+        'opacity': '1',
+        'filter': 'grayscale(0%)',
+        '-webkit-filter': 'grayscale(0%)'
+      })
+
+      $('.map-images').css({
+        'opacity': 0
+      });
+      $(thisTargetImg).css({
+        'opacity': 1
+      });
+    })
+  } else {
+    $('.map-lists .map-btns').click(function() {
+      var thisTarget = $(this).data('target-image'),
+        thisTargetImg = "." + thisTarget + "-image";
+      $('.map-images').css({
+        'opacity': 0
+      });
+      $(thisTargetImg).css({
+        'opacity': 1
+      });
+    })
+
+    $('.map-lists ol').slideUp();
+    $('.map-lists').click(function() {
+      $('.map-lists ol').slideUp();
+      $('.map-lists').removeClass('active');
+
+      if ($(this).find("ol").is(":hidden")) {
+        $(this).find("ol").slideToggle();
+        $(this).toggleClass('active');
+      }
+    })
   }
 
 
-if ($('body').hasClass('portfolio')){
+  if ($('body').hasClass('portfolio')) {
 
-  portfolioSlider = $('.portfolio-slides').bxSlider({
-			adaptiveHeight: true,
-			mode: 'horizontal',
-			captions: true,
-			pager: true,
-			pagerType: 'short'
-		});
-}
+    portfolioSlider = $('.portfolio-slides').bxSlider({
+      adaptiveHeight: true,
+      mode: 'horizontal',
+      captions: true,
+      pager: true,
+      pagerType: 'short'
+    });
+  }
 
-if ($('body').hasClass('availabilities-details')){
+  if ($('body').hasClass('availabilities-details')) {
 
-  availabilitiesSlider = $('.availabilities-slides').bxSlider({
-			adaptiveHeight: true,
-			mode: 'horizontal',
-			captions: true,
-			pager: true,
-			pagerType: 'short'
-		});
-}
+    availabilitiesSlider = $('.availabilities-slides').bxSlider({
+      adaptiveHeight: true,
+      mode: 'horizontal',
+      captions: true,
+      pager: true,
+      pagerType: 'short'
+    });
+  }
 
 
 

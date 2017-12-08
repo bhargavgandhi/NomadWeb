@@ -21,15 +21,15 @@
 	<div id="preloader" class="Hide"></div>
 
 	<div id="introVideoHome" style="width: 100%; height: 100%;">
-		<video id="introVideo" width="100%" height="100%" autoplay>
+		<video id="introVideo" width="100%" height="100%" autoplay playsinline>
 			<source src="https://s3.amazonaws.com/reacdn/nomad/nomad-intro.mov" type="video/mp4">
 			</video>
-			<h1>
+		<h1>
 				<button id="skipIntro1">
 					Skip Introduction
 				</button>
 			</h1>
-		</div>
+	</div>
 
 
 	<section class="container">
@@ -100,13 +100,13 @@
 								<a href="neighborhood.html" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 									NEIGHBORHOOD
 								</a>
-								<ul class="dropdown-menu">
+								<!-- <ul class="dropdown-menu">
 									<li>
 										<a href="#location-maps">
 											LOCATION MAPS
 										</a>
 									</li>
-								</ul>
+								</ul> -->
 							</li>
 							<li>
 								<a href="news.html">
@@ -199,11 +199,11 @@
 
 
 		<!-- Prev Page Nav Arrow -->
-		<div class="prev-nav-main">
+		<!-- <div class="prev-nav-main">
 			<a href="contact.html">
 				<img src="assets/images/arrow-left.svg" width="10px" alt="prev navigation" />
 			</a>
-		</div>
+		</div> -->
 
 		<!-- Next Page Nav Arrow -->
 		<div class="next-nav-main">
@@ -228,11 +228,11 @@
 								<image x="0" y="0" width="291" height="292" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/401park-1@2x.png" class="main-images image-401park"></image>
 							</a>
 
-							<a href="portfolio-12w-27st.html" class="left-blocks2 home-image home-image-change" data-target="12w27">
+							<a xlink:href="portfolio-12w-27st.html" class="left-blocks2 home-image home-image-change" data-target="12w27">
 								<image x="0" y="320" width="319" height="34" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/12w27.svg" class="home-image-a home-image-b1"></image>
 								<image x="0" y="320" width="319" height="34" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/12w27-b.svg" class="home-image-b home-image-b2"></image>
 							</a>
-							<a href="portfolio-30w-26st.html" class="left-blocks2 home-image home-image-change" data-target="30w26">
+							<a xlink:href="portfolio-30w-26st.html" class="left-blocks2 home-image home-image-change" data-target="30w26">
 								<image x="0" y="380" width="346" height="34" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/30w26.svg" class="home-image-a home-image-c1"></image>
 								<image x="0" y="380" width="346" height="34" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/30w26-b.svg" class="home-image-b home-image-c2"></image>
 							</a>
@@ -250,24 +250,17 @@
 									</body>
 								</foreignObject>
 							</a>
-							<a href="portfolio-12w-21st.html" class="left-blocks2 home-image home-image-change" data-target="12w21">
-                                <image x="0" y="705" width="481" height="34" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/12w21.svg"
-                                    class="home-image-a home-image-d1">
-                                </image>
-                                <image x="0" y="705" width="481" height="34" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/12w21-b.svg"
-                                    class="home-image-b home-image-d2">
-                                </image>
-                            </a>
+							<a xlink:href="portfolio-12w-21st.html" class="left-blocks2 home-image home-image-change" data-target="12w21">
+								<image x="0" y="705" width="481" height="34" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/12w21.svg" class="home-image-a home-image-d1"></image>
+								<image x="0" y="705" width="481" height="34" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/12w21-b.svg" class="home-image-b home-image-d2"></image>
+							</a>
 
-                            <!-- Right Side -->
-                            <a href="portfolio-6e-32st.html" class="right-blocks2 home-image home-image-change" data-target="6e32">
-                                <image x="200" y="0" width="578" height="34" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/6e32.svg"
-                                    class="home-image-a home-image-e1">
-                                </image>
-                                <image x="200" y="0" width="578" height="34" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/6e32-b.svg"
-                                    class="home-image-b home-image-e2">
-                                </image>
-                            </a>
+							<!-- Right Side -->
+							<a xlink:href="portfolio-6e-32st.html" class="right-blocks2 home-image home-image-change" data-target="6e32">
+								<image x="200" y="0" width="578" height="34" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/6e32.svg"
+								  class="home-image-a home-image-e1"></image>
+									<image x="200" y="0" width="578" height="34" opacity="0" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/6e32-b.svg" class="home-image-b home-image-e2"></image>
+								</a>
 
                             <a class="right-blocks home-image-f">
                                 <image x="228" y="65" width="550" height="162" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/home/home2@2x.png"
@@ -291,7 +284,7 @@
                                 </image>
                             </a>
 
-                            <a href="portfolio-401-park-ave-s.html" class="right-blocks2 home-image home-image-change" data-target="401park">
+                            <a xlink:href="portfolio-401-park-ave-s.html" class="right-blocks2 home-image home-image-change" data-target="401park">
                                 <image x="310" y="258" width="469" height="34" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/401park.svg"
                                     class="home-image-a home-image-g1">
                                 </image>
@@ -353,7 +346,9 @@
                                 </image>
                             </a>
 
-                            <a class="left-blocks2 home-image home-image-change" data-target="12w27">
+
+
+													  <a xlink:href="portfolio-12w-27st.html" class="left-blocks2 home-image home-image-change" data-target="12w27">
                                 <image x="0" y="225" width="260" height="56" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/mobile/home-bar/12w27@2x.png"
                                     class="home-image-a home-image-b1">
                                 </image>
@@ -361,7 +356,8 @@
                                     class="home-image-b home-image-b2">
                                 </image>
                             </a>
-                            <a class="left-blocks2 home-image home-image-change" data-target="30w26">
+
+													  <a xlink:href="portfolio-30w-26st.html" class="left-blocks2 home-image home-image-change" data-target="30w26">
                                 <image x="0" y="310" width="296" height="56" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/mobile/home-bar/30w26@2x.png"
                                     class="home-image-a home-image-c1">
                                 </image>
@@ -391,7 +387,9 @@
                                 </image>
                             </a>
 
-                            <a class="left-blocks2 home-image home-image-change" data-target="12w21">
+
+
+                            <a xlink:href="portfolio-12w-21st.html" class="left-blocks2 home-image home-image-change" data-target="12w21">
                                 <image x="0" y="595" width="414" height="56" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/mobile/home-bar/12w21@2x.png"
                                     class="home-image-a home-image-d1">
                                 </image>
@@ -400,8 +398,13 @@
                                 </image>
                             </a>
 
-                            <!-- Right Side -->
-                            <a class="right-blocks2 home-image home-image-change" data-target="6e32">
+
+
+
+
+														<!-- Right Side -->
+
+														<a xlink:href="portfolio-6e-32st.html" class="right-blocks2 home-image home-image-change" data-target="6e32">
                                 <image x="195" y="0" width="494" height="56" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/mobile/home-bar/6e32@2x.png"
                                     class="home-image-a home-image-e1">
                                 </image>
@@ -431,7 +434,7 @@
                                 </image>
                             </a>
 
-                            <a class="right-blocks2 home-image home-image-change" data-target="401park">
+                            <a xlink:href="portfolio-401-park-ave-s.html" class="right-blocks2 home-image home-image-change" data-target="401park">
                                 <image x="290" y="225" width="402" height="56" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/mobile/home-bar/401park@2x.png"
                                     class="home-image-a home-image-g1">
                                 </image>
@@ -439,6 +442,8 @@
                                     class="home-image-b home-image-g2">
                                 </image>
                             </a>
+
+
 
                             <a class="right-blocks home-image-h">
                                 <image x="328" y="310" width="366" height="334" opacity="1" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images/mobile/home/home-4@2x-mob.png"
@@ -465,12 +470,12 @@
                     </svg>
 
 
-										<h2 class="greentext">PLANTING YOUR FLAG
-										</h2>
-										<p>
-											Himmel + Meringoff have waved the NoMad flag for over 35 years, with a neighborhood-spanning commercial portfolio that has drawn tenants such as Samsung, IAC Sydell, Hill Country, WeWork, SoulCycle, Charter Communications, City Harvest and xAd. Across a selection of distinctive, flexible office spaces ranging from 5,000 to 20,000 RSF, executives, entrepreneurs and interns alike have found a place to explore, celebrate and belong.
-										</p>
-									</div>
+					<h2 class="greentext">PLANTING YOUR FLAG</h2>
+					<p>
+						Himmel + Meringoff have waved the NoMad flag for over 35 years, with a neighborhood-spanning commercial portfolio that has drawn tenants such as Samsung, IAC Sydell, Hill Country, WeWork, SoulCycle, Charter Communications, City Harvest and xAd. Across
+						a selection of distinctive, flexible office spaces ranging from 5,000 to 20,000 RSF, executives, entrepreneurs and interns alike have found a place to explore, celebrate and belong.
+					</p>
+				</div>
 			</section>
 		</section>
 		<!-- End MainContainer -->

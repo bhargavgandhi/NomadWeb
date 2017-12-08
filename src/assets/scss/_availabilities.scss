@@ -14,9 +14,17 @@
 
 .avail-lists {
   .avail-item {
+    text-decoration: none;
     display: flex;
     flex-direction: row;
     border-top: 1px solid #000;
+
+    &:active,
+    &:focus,
+    &:hover,
+    &:visited {
+      text-decoration: none;
+    }
 
     &:last-child {
       border-bottom: 1px solid #000;
@@ -24,7 +32,8 @@
 
     a,
     h3,
-    h4 {
+    h4,
+    span {
       font-size: 16px;
       font-size: 1em;
       font-weight: bold;
@@ -152,7 +161,8 @@
   }
 }
 
-.avail-contact-info, .available-space{
+.avail-contact-info,
+.available-space {
   .avail-detail-item {
     border-bottom: 1px solid #000;
   }
@@ -181,11 +191,12 @@
       text-align: center;
     }
 
-    &.no-margin-bottom{
-      margin-bottom:0;
+    &.no-margin-bottom {
+      margin-bottom: 0;
     }
-    &.no-margin-top{
-      margin-top:0;
+
+    &.no-margin-top {
+      margin-top: 0;
     }
 
     a {
@@ -206,11 +217,11 @@
   }
 }
 
-
-
-.availabilities-details-block, .portfolio-block {
+.availabilities-details-block,
+.portfolio-block {
   h2 {
     position: relative;
+
     .back-to-list {
       cursor: pointer;
       position: absolute;
@@ -250,7 +261,6 @@
     }
   }
 }
-
 @media screen and (min-width: 300px) and (max-width: 767px) {
   .avail-detail-items {
     h4 {
@@ -313,6 +323,16 @@
           font-size: 0.875em;
         }
       }
+    }
+  }
+
+  .avail-details {
+    .btn-download {
+      margin: 10% 0 0 auto;
+      font-size: 14px;
+      font-size: 0.8em;
+      line-height: 1.62;
+      width: 50%;
     }
   }
 }

@@ -70,7 +70,7 @@
     }
   }
 
-  .btn-download{
+  .btn-download {
     width: 25%;
     color: #6f6e6e;
   }
@@ -213,6 +213,21 @@
         line-height: 1.75;
       }
     }
+
+    .btn {
+      font-size: 10px;
+      font-size: 0.6em;
+      margin: 5px 15px 0 auto;
+    }
+
+    .btn-download {
+      width: 28%;
+      color: #6f6e6e;
+    }
+
+    .btn img {
+      width: 58px;
+    }
   }
 
   body.portfolio-main {
@@ -228,10 +243,10 @@
 }
 @media screen and (min-width: 1200px) and (max-height: 700px) {
   body.portfolio header.closeHead ~ .main-container {
-      width: 65%;
+    width: 65%;
   }
-  .portfolio-block {
-  }
+
+  .portfolio-block {}
 
   .portfolio-details {
     margin-top: 1.5em;

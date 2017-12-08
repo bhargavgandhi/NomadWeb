@@ -453,6 +453,8 @@ blockquote {
     .main-block {
       h2 {
         margin: 20px 0;
+        letter-spacing: normal;
+        line-height: 1;
       }
     }
   }
@@ -541,6 +543,10 @@ blockquote {
           transform: translate3d(1250px, 0, 0);
           animation: rightBlocks2 2.3s both cubic-bezier(0.74, 0.09, 0.14, 1.04);
           animation-delay: 0.02s;
+        }
+
+        .left-blocks.no-animate, .left-blocks2.no-animate, .right-blocks.no-animate, .right-blocks2.no-animate {
+          transform: translate3d(0, 0, 0);
         }
 
         .left-heading {
