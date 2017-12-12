@@ -368,13 +368,21 @@ body.neighborhood{
 
       ol {
         list-style: none;
-        counter-reset: Item;
+        //counter-reset: Item;
         padding: 10px 1.5em;
         //max-height: 200px;
         -webkit-column-count: 2;
         -moz-column-count: 2;
         column-count: 2;
         overflow: scroll;
+
+        counter-reset: lis attr(start, number, 0);
+
+        &.one-column{
+          -webkit-column-count: 1;
+          -moz-column-count: 1;
+          column-count: 1;
+        }
 
         li {
           font-family: $archivoNarrow;
@@ -384,14 +392,36 @@ body.neighborhood{
           letter-spacing: -0.2px;
           text-align: left;
           color: #000000;
+          counter-increment: lis;
 
           &:before {
-            content: counter(Item) "- ";
-            counter-increment: Item;
+            //content: counter(Item) "- ";
+            content: counter(lis)". ";
+            // counter-increment: Item;
             margin: 0;
             padding: 0;
           }
         }
+      }
+
+      ol:not(:nth-of-type(1)) {
+        counter-increment: lis 20;
+      }
+
+      ol[start="35"] {
+        counter-increment: lis 34;
+      }
+
+      ol[start="41"] {
+        counter-increment: lis 40;
+      }
+
+      ol[start="52"] {
+        counter-increment: lis 51;
+      }
+
+      ol[start="54"] {
+        counter-increment: lis 53;
       }
 
       &:nth-child(even) {

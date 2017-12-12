@@ -460,6 +460,55 @@ form {
     }
   }
 
+
+  /* form styles */
+  form {
+
+    .slant-right {
+      width: 98%;
+
+      &:before{
+        border-right: 22px solid #fff;
+      }
+    }
+
+    .slant-right-2 {
+      width: 110%;
+
+      &:before{
+        border-right: 22px solid #fff;
+      }
+    }
+
+    .slant-left {
+      width: 100%;
+
+      &:before{
+        border-left: 22px solid #fff;
+      }
+    }
+
+    .slant-left-2 {
+      width: 88%;
+
+      &:before{
+        border-left: 22px solid #fff;
+      }
+    }
+
+    textarea {
+      height: 142px;
+    }
+
+    #Submit {
+      width: 75px;
+      font-size: 12px;
+      font-size: 0.8em;
+      line-height: 1.75;
+      background-size: 4px 10px;
+    }
+  }
+
   .contact-content-block {
     height: auto;
     margin-left: 0;
@@ -512,6 +561,8 @@ form {
         text-align: left;
         color: #6f6e6e;
         margin: 0;
+        font-size: 12px;
+        font-size: 0.75em;
       }
     }
 
@@ -526,6 +577,8 @@ form {
             letter-spacing: -0.1px;
             text-align: left;
             color: #6f6e6e;
+            font-size: 12px;
+            font-size: 0.75em;
           }
 
           &:last-child {

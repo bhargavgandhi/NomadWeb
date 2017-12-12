@@ -156,38 +156,39 @@
 
 .modal-dialog {
   width: 70% !important;
-  max-width: 1000px;
+  max-width: 1500px;
   margin: 30px auto;
 }
 
 .carousel-control {
-    position: absolute;
-    top: 50%;
-    bottom: 0;
-    left: 0;
-    width: 0.65em;
-    font-size: 20px;
-    color: #fff;
-    text-align: center;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.6);
-    background-color: transparent;
-    filter: alpha(opacity=50);
-    opacity: .5;
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  width: 0.65em;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+  background-color: transparent;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
 }
 
-.carousel-control.right, .carousel-control.left {
-    background-image: none;
-    filter: none;
-    background-repeat: no-repeat;
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+  filter: none;
+  background-repeat: no-repeat;
 }
+
 .carousel-control.right {
   right: 10px;
 }
+
 .carousel-control.left {
   left: 10px;
 }
-
-
 @media screen and (min-width: 300px) and (max-width: 999px) {
   .news-block {
     margin: 0 auto;
@@ -246,8 +247,7 @@
   //Modal Mobile css
   .modal {
     position: fixed;
-    top: auto;
-    top: initial;
+    top: 15%;
     right: 0;
     bottom: 0;
     left: 0;
@@ -258,10 +258,18 @@
     outline: 0;
   }
 
+  .modal .modal-body {
+    padding: 0 20px;
+  }
+
   .modal-dialog {
-    width: 100% !important;
-    max-width: 500px;
+    width: 85% !important;
+    max-width: none;
     margin: 30px auto;
+  }
+
+  .modal-dialog.modal-landscape {
+    width: 95% !important;
   }
 
   .modal button.close {
@@ -276,5 +284,31 @@
     top: -26px;
     opacity: 1;
     width: 1.25em;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .modal-dialog {
+    width: 55% !important;
+    max-width: 1000px;
+    margin: 30px auto;
+  }
+
+  .modal-dialog.modal-landscape {
+    width: 75% !important;
+    max-width: 1500px;
+    margin: 30px auto;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .modal-dialog {
+    width: 70% !important;
+    max-width: 1000px;
+    margin: 30px auto;
+  }
+
+  .modal-dialog.modal-landscape {
+    width: 70% !important;
+    max-width: 1500px;
+    margin: 30px auto;
   }
 }

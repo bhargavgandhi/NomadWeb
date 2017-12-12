@@ -39,8 +39,7 @@ $(function() {
           // Store
           localStorage.setItem("firstvisit", "yes");
         } else {
-          //endVideo();
-          homePageAnimation();
+          endVideo();
         }
 
       } else {
@@ -215,24 +214,28 @@ $(function() {
 
   if ($('body').hasClass('portfolio')) {
 
-    portfolioSlider = $('.portfolio-slides').bxSlider({
-      adaptiveHeight: true,
-      mode: 'horizontal',
-      captions: true,
-      pager: true,
-      pagerType: 'short'
-    });
+    setTimeout(function(){
+      portfolioSlider = $('.portfolio-slides').bxSlider({
+        adaptiveHeight: true,
+        mode: 'horizontal',
+        captions: true,
+        pager: true,
+        pagerType: 'short'
+      });
+    }, 1000)
   }
 
   if ($('body').hasClass('availabilities-details')) {
 
-    availabilitiesSlider = $('.availabilities-slides').bxSlider({
-      adaptiveHeight: true,
-      mode: 'horizontal',
-      captions: true,
-      pager: true,
-      pagerType: 'short'
-    });
+    setTimeout(function(){
+      availabilitiesSlider = $('.availabilities-slides').bxSlider({
+        adaptiveHeight: true,
+        mode: 'horizontal',
+        captions: true,
+        pager: true,
+        pagerType: 'short'
+      });
+    }, 1000)
   }
 
 
