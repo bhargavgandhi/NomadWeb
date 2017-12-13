@@ -7,6 +7,12 @@ $(window).scroll(function() {
   var wScroll = $(this).scrollTop(),
     fadeClass = "fadeInUp";
   if ($('body').hasClass('neighborhood')) {
+
+    if (wScroll > $('#location-maps').offset().top - ($(window).height() / 1.4)) {
+      $('#scrolldown').removeClass('deactive');
+      $('#scrollup').addClass('deactive');
+    }
+
     if (wScroll > $('#main').offset().top - ($(window).height() / 1.4)) {
       count1++;
       if (count1 === 1) {
@@ -14,6 +20,8 @@ $(window).scroll(function() {
           'animation-play-state' : 'running'
         })
       }
+      $('#scrollup').removeClass('deactive');
+      $('#scrolldown').addClass('deactive');
     }
   }
 });
