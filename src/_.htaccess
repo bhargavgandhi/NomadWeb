@@ -1,3 +1,19 @@
+# BEGIN Redirect
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteBase /
+rewritecond %{http_host} ^thenomadportfolio.com/ [nc]
+rewriterule ^(.*)$ http://www.thenomadportfolio.com/$1 [r=301,nc]
+
+RewriteCond %{THE_REQUEST} ^.*/index\.html
+RewriteRule ^(.*)index.html$ http://www.thenomadportfolio.com/$1 [R=301,L]
+
+</IfModule>
+
+# END
+
 # BEGIN Expire headers
 <IfModule mod_expires.c>
   ExpiresActive on
@@ -14,6 +30,8 @@
   ExpiresByType image/x-icon              "access plus 1 month"
 
 # Media: images, video, audio
+  ExpiresByType image/svg                 "access plus 1 month"
+  ExpiresByType image/svg+xml             "access plus 1 month"
   ExpiresByType image/gif                 "access plus 1 month"
   ExpiresByType image/png                 "access plus 1 month"
   ExpiresByType image/jpeg                "access plus 1 month"
@@ -34,11 +52,11 @@
   ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
 
 # CSS and JavaScript
-  ExpiresByType text/css                  "access plus 1 week"
-  ExpiresByType application/javascript    "access plus 1 week"
+  ExpiresByType text/css                  "access plus 1 seconds"
+  ExpiresByType application/javascript    "access plus 1 seconds"
   ExpiresByType text/html                 "access plus 1 seconds"
-  ExpiresByType text/javascript           "access plus 1 week"
-  ExpiresByType application/x-javascript  "access plus 1 week"
+  ExpiresByType text/javascript           "access plus 1 seconds"
+  ExpiresByType application/x-javascript  "access plus 1 seconds"
   ExpiresByType text/php                  "access plus 1 seconds"
 
 </IfModule>

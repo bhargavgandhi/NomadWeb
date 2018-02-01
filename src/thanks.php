@@ -1,3 +1,41 @@
+<?php
+
+    if ($_POST['Submit']) {
+        $Header = 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+        $Header .= 'From: Nomad Portfolio <noreply@thenomadportfolio.com>' . "\r\n";
+        $Header .=  "X-Mailer: php\r\n";
+        $Header .= "MIME-Version: 1.0\r\n";
+				$Header .= "Bcc: bg@realestatearts.com\r\n";
+        ini_set('SMTP', "relay-hosting.secureserver.net");
+        ini_set('smtp_port', "25");
+
+        //mail($email, $subject, $message, $Header);
+
+        $fname = $_POST['fname'];
+        $lname = $_POST['lname'];
+        $email = $_POST['email'];
+        $phone = $_POST['phone'];
+        $msg   = $_POST['message'];
+
+        $toAdmin = "bg@realestatearts.com";
+        // $toAdmin = "dcohen@merprop.com, jvacker@merprop.com";
+
+        $subject2 = "Nomad Portfolio Contact Form Entries";
+        $message2 = "<div style='width: 500px;'>
+							<h2> Nomad Portfolio Contact Form Entry Details </h2>
+							<p> Name : " . $fname . " " . $lname . " </p>
+							<p> Email : " . $email . " </p>
+							<p> Phone : " . $phone . " </p>
+							<p> Message : " . $msg . " </p>
+						</div>
+					";
+
+        mail($toAdmin, $subject2, $message2, $Header);
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +45,7 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
 	<link rel="icon" type="image/png" href="favicon.png">
-	<title>Contact - Nomad</title>
+	<title>Thank You - Nomad</title>
 	<meta name="author" content="The Nomad Portfolio">
 
 	<link rel="stylesheet" href="assets/css/style.css" />
@@ -194,34 +232,12 @@
 							JOIN NOMAD
 						</h2>
 						<div class="col-xs-12 col-md-6 contact-form-inner">
-							<form id="contact-form-main" action="thanks.php" method="post">
-								<div class="col-xs-6 col-sm-6 marginLess5 form-field">
-									<div class="slant-input slant-right">
-										<input type="text" name="fname" id="fname" placeholder="First Name" maxlength="50" />
-									</div>
-								</div>
-								<div class="col-xs-6 col-sm-6 form-field">
-									<div class="slant-input slant-left floatRight">
-										<input type="text" name="lname" id="lname" placeholder="Last Name" maxlength="50" />
-									</div>
-								</div>
-								<div class="col-xs-6 col-sm-6 marginLess5 form-field">
-									<div class="slant-input slant-right-2">
-										<input type="email" name="email" id="email" placeholder="Email" maxlength="100" />
-									</div>
-								</div>
-								<div class="col-xs-6 col-sm-6 form-field">
-									<div class="slant-input slant-left-2 floatRight">
-										<input type="tel" name="phone" id="phone" placeholder="Phone" maxlength="10" />
-									</div>
-								</div>
-								<div class="col-xs-12 col-sm-12 form-field">
-									<textarea name="message" id="message" maxlength="1000" rows="7" cols="30" placeholder="Message"></textarea>
-								</div>
-								<div class="col-xs-12 col-sm-2 form-field">
-									<input type="submit" name="Submit" id="Submit" value="Submit" />
-								</div>
-							</form>
+              <h3>
+                THANK YOU
+              </h3>
+              <h4>
+                  A representative will be in touch shortly.
+              </h4>
 						</div>
 						<div class="col-xs-12 col-md-5 contact-content-block">
 							<div class="contact-info">

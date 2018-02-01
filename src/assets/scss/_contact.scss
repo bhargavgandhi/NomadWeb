@@ -272,6 +272,13 @@ form {
     // -webkit-font-smoothing: antialiased;
   }
 
+  input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color: transparent;
+    background: #e1e1e1;
+    background-image: none;
+    color: rgb(0, 0, 0);
+}
+
   h2 {
     font-size: 16px;
     font-size: 1em;
@@ -494,7 +501,7 @@ form {
       &:before{
         border-left: 22px solid #fff;
       }
-    }  
+    }
 
     textarea {
       height: 142px;
