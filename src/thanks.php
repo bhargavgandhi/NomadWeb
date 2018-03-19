@@ -2,35 +2,38 @@
 
     if ($_POST['Submit']) {
         $Header = 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-        $Header .= 'From: Nomad Portfolio <noreply@thenomadportfolio.com>' . "\r\n";
+        $Header .= 'From: Nomad Portfolio <info@thenomadportfolio.com>' . "\r\n";
         $Header .=  "X-Mailer: php\r\n";
         $Header .= "MIME-Version: 1.0\r\n";
-				$Header .= "Bcc: bg@realestatearts.com\r\n";
+
         ini_set('SMTP', "relay-hosting.secureserver.net");
         ini_set('smtp_port', "25");
 
         //mail($email, $subject, $message, $Header);
 
+				$email = $_POST['email'];
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
-        $email = $_POST['email'];
         $phone = $_POST['phone'];
         $msg   = $_POST['message'];
 
-        $toAdmin = "bg@realestatearts.com";
-        // $toAdmin = "dcohen@merprop.com, jvacker@merprop.com";
+        $toAdmin = "dcohen@merprop.com, jvacker@merprop.com";
 
         $subject2 = "Nomad Portfolio Contact Form Entries";
         $message2 = "<div style='width: 500px;'>
-							<h2> Nomad Portfolio Contact Form Entry Details </h2>
+							<h2> Nomad Portfolio Contact Form Entry </h2>
 							<p> Name : " . $fname . " " . $lname . " </p>
-							<p> Email : " . $email . " </p>
 							<p> Phone : " . $phone . " </p>
+							<p> Email : " . $email . " </p>
 							<p> Message : " . $msg . " </p>
 						</div>
 					";
 
-        mail($toAdmin, $subject2, $message2, $Header);
+        $success = mail($toAdmin, $subject2, $message2, $Header);
+        if (!$success) {
+            $errorMessage = error_get_last()['message'];
+            mail('bg@realestatearts.com', 'Nomad Mail Error', $errorMessage, $Header);
+        }
     }
 
 ?>
