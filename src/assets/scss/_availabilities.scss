@@ -149,6 +149,10 @@
   .avail-detail-row {
     border-bottom: 1px solid #000;
 
+    &.border-top {
+      border-top: 1px solid #000;
+    }
+
     &.noBorder {
       border: 0;
     }
