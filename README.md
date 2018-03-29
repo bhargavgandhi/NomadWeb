@@ -1,5 +1,5 @@
-# baseLayout
-Simple layout page for Desktop/laptop devices. (Animation and Mobile responsive is in progress)
+# Nomad Portfolio Website
+Responsive website built using HTML5, SASS/CSS3, Javascript/jQuery and Bootstrap.
 
 # Getting Started
 
